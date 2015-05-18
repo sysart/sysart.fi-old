@@ -1,0 +1,494 @@
+/*Variables*/
+@font-face {
+  font-family: Campton-B;
+  src: url(fonts/Campton-Bold.otf);
+}
+@font-face {
+  font-family: Campton-L;
+  src: url(fonts/Campton-Light.otf);
+}
+/*---------------------------------
+             HTML
+---------------------------------*/
+html,
+body {
+  background-color: #f7f7ed;
+  text-align: center;
+}
+h1,
+h2 {
+  font-family: Campton-B;
+  color: #76787b;
+}
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+  font-family: Campton-L;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+p {
+  text-align: justify;
+}
+a {
+  color: #f79952;
+}
+a:visited {
+  color: #f79952;
+}
+a:hover {
+  color: #f36421;
+}
+.date {
+  font-size: 15px;
+  line-height: 20px;
+}
+#blogit a:hover {
+  color: white;
+  background: #f79952;
+  padding: 10px;
+}
+#ghost {
+  height: 0px;
+  background-color: transparent;
+  transition: .5s;
+}
+#headerstatic {
+  height: 260px;
+  width: 100%;
+  background: transparent;
+  margin-bottom: -260px;
+}
+.top30 {
+  margin-top: 30px;
+}
+.bottom30 {
+  margin-bottom: 30px !important;
+}
+#topnav {
+  background-color: #76787b;
+  text-align: left;
+  z-index: 10;
+  transition: opacity 1s;
+  position: relative;
+}
+.nav {
+  height: 30px;
+}
+.nav a {
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px;
+  line-height: 30px;
+}
+/*Keskipalkki*/
+#header-small {
+  height: 30px;
+  background-color: white;
+  transition: 2s;
+}
+#header-small img {
+  height: 30px;
+}
+.preview {
+  transition: 1s;
+}
+#header {
+  height: 200px;
+  background: white;
+  transition: .5s;
+}
+#header #logo {
+  padding-top: 50px;
+  display: none;
+}
+#bottomnav {
+  background-color: #76787b;
+  text-align: right;
+  z-index: 10;
+  transition: opacity 1s;
+}
+.nav-start {
+  opacity: 0;
+}
+#basement {
+  text-align: left;
+}
+.ankkuri {
+  display: block;
+  position: relative;
+  top: -90px;
+  visibility: hidden;
+}
+/*  Topnav  */
+.fixed-bar-1,
+.fixed-bar-2,
+.fixed-bar-3,
+.fixed-bar-4,
+.fixed-bar-5,
+.fixed-bar-6 {
+  position: fixed !important;
+  width: 100%;
+  left: 0;
+}
+.fixed-bar-1 {
+  top: 0;
+}
+.fixed-bar-2 {
+  top: 30px;
+  height: 30px !important;
+  transition: none;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+}
+.fixed-bar-3 {
+  top: 60px;
+}
+.fixed-bar-4 {
+  bottom: 60px;
+}
+.fixed-bar-5 {
+  bottom: 30px;
+  height: 30px !important;
+  transition: none;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+}
+.fixed-bar-6 {
+  bottom: 0px;
+}
+.top-stay {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.bottom-stay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+/* Start classes */
+.header-start {
+  height: 0px !important;
+  overflow: hidden;
+}
+.ghost-start {
+  height: 100px !important;
+}
+.row {
+  opacity: 1;
+  transition: 2s;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/*div {
+  border: 1px solid @ash;
+}*/
+.row-start {
+  opacity: 0;
+}
+.author {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+.ball {
+  margin: auto;
+  background-color: #f79952;
+  border: 1px solid #76787b;
+  width: 250px !important;
+  height: 250px !important;
+  transition: all 0.3s ease, background-position 1ms;
+  border-radius: 50%;
+}
+.ball h2 {
+  color: #f7f7ed;
+  line-height: 150px;
+}
+.ball i {
+  font-size: 150px;
+  line-height: 250px;
+  color: white;
+}
+.row h2 {
+  font-size: 40px;
+  text-align: center;
+}
+.piece-of-news {
+  transition: 1s;
+  float: left !important;
+}
+.piece-of-news:hover .readmore {
+  opacity: 1;
+  transition: 1s;
+}
+.hide-news {
+  height: 0px;
+}
+.news-ball {
+  border: 5px solid grey;
+  float: left !important;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: 1s;
+  background-size: cover;
+  background-position: 50%;
+}
+.news-content {
+  display: none;
+  height: auto;
+  padding-bottom: 50px;
+}
+#ura .plus {
+  font-size: 100px;
+  color: #76787b;
+  padding: 30px;
+}
+#twitter .bird {
+  font-size: 100px;
+  color: #76787b;
+  padding: 30px;
+}
+#twitter .bubble {
+  font-size: 50px;
+  float: right;
+  color: #76787b;
+}
+#twitter .tweet {
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 2;
+}
+#twitter .tweet p {
+  font-size: 20px;
+  word-break: break-word;
+}
+.spin {
+  transform: rotate(180deg) !important;
+}
+.news-head {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.readmore {
+  color: white;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  height: 50px;
+  font-size: 50px !important;
+  transition: 1s;
+  z-index: 9;
+}
+.uraMahdollisuus {
+  background: #76787b;
+  margin: 5px;
+  padding: 10px 20px 10px 20px;
+}
+.uraMahdollisuus .tyopaikka {
+  margin: 0;
+}
+.uraMahdollisuus p {
+  color: white;
+  padding: 0;
+}
+.uraInfo {
+  padding-top: 10px;
+  display: none;
+}
+.uraInfo p {
+  text-align: left;
+}
+.readmore:hover {
+  color: #f79952;
+}
+.dwtitle {
+  font-family: Campton-l;
+  font-size: 1rem;
+}
+.dwSelect {
+  font-family: Campton-B;
+  font-size: 1.5rem;
+}
+.dwdivider {
+  font-family: Campton-l;
+  font-size: 1.5rem;
+}
+.faceball-holder {
+  width: 150px;
+  margin: 5px;
+  /*  .jobTitle {
+      //display: none;
+      position: absolute;
+      background: @ash;
+      margin-top: 30px;
+      //width: 150px;
+    }*/
+}
+.faceball-holder .dwi {
+  position: relative;
+  transition: 1s;
+}
+.faceball-holder .ddwi {
+  top: -10000px !important;
+}
+.faceball-holder .name {
+  display: none;
+  position: absolute;
+  background: #76787b;
+  margin-top: -30px;
+  width: 150px;
+  font-family: Campton-L;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
+.faceball-holder span {
+  color: white;
+}
+.face-ball {
+  border: 5px solid #76787b;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto;
+  transition: 1s;
+  background-size: cover;
+  background-position: 50%;
+}
+#yhteystiedot {
+  background-color: #76787b;
+  font-family: Campton-L;
+}
+#yhteystiedot h3 {
+  font-family: Campton-B;
+  color: #f7f7ed;
+  margin: 0px;
+  margin-top: 20px;
+}
+#yhteystiedot li {
+  text-align: center;
+  width: 80px;
+  height: 80px;
+}
+#yhteystiedot i {
+  font-size: 5rem;
+  color: #f7f7ed;
+  margin: 20px;
+}
+#yhteystiedot i:hover {
+  color: #f79952;
+}
+#yhteystiedot .address {
+  position: relative;
+  z-index: 2;
+}
+#yhteystiedot .markerHolder {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+#yhteystiedot .marker {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-left: 10px;
+}
+.asiakkaat {
+  text-align: center;
+}
+.customer-logo {
+  border: 5px solid #76787b;
+}
+.happy-customer {
+  float: left !important;
+  padding: 10px;
+  text-align: center;
+}
+.happy-customer img {
+  background: white;
+}
+#marker {
+  text-align: center;
+  font-size: 240px !important;
+  line-height: 100px;
+  margin-top: -100px;
+  color: #f79952;
+}
+.nav a:hover {
+  background: #f79952;
+}
+.avoimet {
+  text-align: left;
+}
+@media only screen and (max-width: 750px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  .news-ball {
+    width: 75px;
+    height: 75px;
+    border: 1px solid #76787b;
+    transition: 1s;
+  }
+  #header {
+    height: 100px;
+    background: white;
+    transition: .5s;
+  }
+  #header #logo {
+    padding-top: 25px;
+    display: none;
+  }
+  #header #logo img {
+    height: 50px;
+  }
+  .ghost-start {
+    height: 50px !important;
+    transition: all 1s;
+  }
+  .nav a {
+    font-size: 10px;
+    line-height: 30px;
+    margin: 2px;
+  }
+  .ball {
+    width: 100px !important;
+    height: 100px !important;
+    margin: 0px !important;
+    transition: all 0.3s ease, background-position 1ms;
+  }
+  .ball h2 {
+    line-height: 100px !important;
+    font-size: 2rem;
+    transition: all 0.3s ease, background-position 1ms;
+  }
+}
+::selection {
+  background: #f36421;
+  color: white;
+}
+::-moz-selection {
+  background: #f36421;
+  color: white;
+}
