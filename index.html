@@ -33,7 +33,6 @@
 
 <section id="ullakko" class="content">
 
-    <a id="rekry" class="ankkuri"></a>
 
     <div id="ura" class="row row-start">
         <h2>Osaajille on aina tilaa!</h2>
@@ -592,9 +591,9 @@
 
 <div id="bottomnav" class="nav-start">
     <nav class="nav">
-        <a href="#ajankohtaista">Ajankohtaista</a>
-        <a href="#palvelut">Palvelut</a>
-        <a href="#asiakkaat">Asiakkaat</a>
+        <a href="#ajankohtaistaA">Ajankohtaista</a>
+        <a href="#palvelutA">Palvelut</a>
+        <a href="#asiakkaatA">Asiakkaat</a>
         <a href="#yhteystiedot">Yhteystiedot</a>
     </nav>
 </div>
@@ -603,9 +602,9 @@
 
 
     <!-- UUTISET -->
-    <a id="ajankohtaista" class="ankkuri"></a>
+    <a id="ajankohtaistaA" class="ankkuri"></a>
 
-    <div class="row row-start">
+    <div id="ajankohtaista" class="row row-start">
         <h2 class="small-12 columns">AJANKOHTAISTA</h2>
 
 
@@ -793,9 +792,9 @@
     </div>
 
 
-    <a id="palvelut" class="ankkuri"></a>
+    <a id="palvelutA" class="ankkuri"></a>
 
-    <div class="row row-start services">
+    <div id="palvelut" class="row row-start services">
         <h2>PALVELUT</h2>
 
         <div class="small-12 columns">
@@ -897,9 +896,9 @@
         </div>
     </div>
 
-    <a id="asiakkaat" class="ankkuri"></a>
+    <a id="asiakkaatA" class="ankkuri"></a>
 
-    <div class="row row-start">
+    <div id="asiakkaat" class="row row-start">
         <h2>ASIAKKAITAMME</h2>
 
         <div class="small-12 columns">
@@ -1099,8 +1098,7 @@
             grp[i] = grp[x];
             grp[x] = temp;
         }
-        //$(grp).remove();
-        //console.log(grp);
+
         $("#sysartilaiset").append($(grp));
     }
 

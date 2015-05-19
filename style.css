@@ -486,7 +486,9 @@ h2 {
   .readmore {
     color: transparent;
     height: 100%;
-    color: #f79952;
+  }
+  .readmore:hover {
+    color: transparent;
   }
   h2 {
     font-size: 1.5rem;
