@@ -1222,6 +1222,10 @@
 
 
     $("#johto").click(function () {
+        $(".face-ball").children("img").addClass("ddwi");
+        $(".face-ball").next(".name").slideUp();
+
+
 
         if ($(this).hasClass("valittu")) {
             $(this).removeClass("valittu");
@@ -1243,6 +1247,9 @@
     });
 
     $("#oulu").click(function () {
+        $(".face-ball").children("img").addClass("ddwi");
+        $(".face-ball").next(".name").slideUp();
+
 
         if ($(this).hasClass("valittu")) {
             $(this).removeClass("valittu");
@@ -1263,6 +1270,8 @@
     });
 
     $("#helsinki").click(function () {
+        $(".face-ball").children("img").addClass("ddwi");
+        $(".face-ball").next(".name").slideUp();
 
         if ($(this).hasClass("valittu")) {
             $(this).removeClass("valittu");
