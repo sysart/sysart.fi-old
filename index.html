@@ -14,10 +14,17 @@
 
 
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-1384247-1', 'auto');
         ga('send', 'pageview');
@@ -505,8 +512,7 @@
                 The ability to learn and adapt on an organizational level is what makes all the difference.</p>
 
 
-            <a target="_blank" href="https://dmwellner.wordpress.com/">Siirry
-                blogiin</a>
+            <a target="_blank" href="https://dmwellner.wordpress.com/">Siirry blogiin</a>
         </div>
 
         <div class="small-12 medium-6 columns" id="class-preview">
@@ -577,7 +583,7 @@
 
 <section id="header-small" class="hide">
     <div id="logo-small">
-        <img class="centered" src="img/logo/sysart_127x30.png">
+        <img src="img/logo/sysart_127x30.png">
     </div>
 </section>
 
@@ -1226,7 +1232,6 @@
         $(".face-ball").next(".name").slideUp();
 
 
-
         if ($(this).hasClass("valittu")) {
             $(this).removeClass("valittu");
             $(".johto").children("img").addClass("ddwi");
@@ -1310,9 +1315,6 @@
             $(this).addClass("valittu");
         }
     });
-
-
-
 
 
     $(".readmore").click(function () {
