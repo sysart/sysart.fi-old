@@ -50,7 +50,6 @@ a:hover {
 }
 .date {
   font-size: 15px;
-  line-height: 20px;
 }
 #blogit a:hover {
   color: white;
@@ -472,6 +471,12 @@ h2 {
   }
   .news-head {
     height: 100px;
+  }
+  .news-head h3 {
+    line-height: 1rem;
+  }
+  .news-head h3 .date {
+    font-size: 10px;
   }
   #yhteystiedot i {
     font-size: 3rem;
