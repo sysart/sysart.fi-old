@@ -364,6 +364,7 @@ h2 {
   background: #76787b;
   padding: 5px;
   margin: 5px;
+  cursor: pointer;
 }
 .valittu {
   color: #f79952 !important;
