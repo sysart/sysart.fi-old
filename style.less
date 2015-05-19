@@ -29,12 +29,12 @@ html, body {
   text-align: center;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: Campton-B;
   color: @ash;
 }
 
-h3, h4, h5, h6, p, a, ul, li {
+h4, h5, h6, p, a, ul, li {
   font-family: Campton-L;
 }
 
@@ -71,6 +71,13 @@ a:hover {
   color: white;
   background: @tangerine;
   padding: 10px;
+}
+
+
+.uusi{
+  font-size: 85px !important;
+  color:white;
+  position:relative;
 }
 
 
@@ -263,7 +270,7 @@ a:hover {
   .row-start {
     opacity: 0;
   }
-
+}
   .author {
     display: -webkit-box;
     display: -webkit-flex;
@@ -295,8 +302,8 @@ a:hover {
 
   }
 
-  .row h2 {
-    font-size: 40px;
+   h2 {
+    font-size: 2rem;
     text-align: center;
   }
 
@@ -331,31 +338,18 @@ a:hover {
     padding-bottom: 50px;
   }
 
-  #ura {
-    p {
-    }
-    .plus {
-
-      font-size: 100px;
-      color: @ash;
-      padding: 30px;
-    }
+  .news-head h3 {
+    text-align: left;
   }
 
   #twitter {
 
     .bird {
-
       font-size: 100px;
       color: @ash;
       padding: 30px;
     }
 
-    .bubble {
-      font-size: 50px;
-      float: right;
-      color: @ash;
-    }
 
     .tweet {
       padding: 30px;
@@ -400,6 +394,10 @@ a:hover {
     z-index: 9;
   }
 
+  #ura{
+    margin-bottom:100px;
+  }
+
   .uraMahdollisuus {
     background: @ash;
     margin: 5px;
@@ -434,9 +432,17 @@ a:hover {
   }
 
   .dwSelect {
+    color:white;
     font-family: Campton-B;
     font-size: 1.5rem;
+    background: @ash;
+    padding: 5px;
+    margin: 5px;
   }
+
+.valittu{
+  color: @tangerine !important;
+}
 
   .dwdivider {
     font-family: Campton-l;
@@ -468,6 +474,10 @@ a:hover {
 
     span {
       color: white;
+    }
+
+    .jobTitle{
+
     }
 
   }
@@ -569,8 +579,46 @@ a:hover {
 
   @media only screen and (max-width: 750px) {
 
-    h2 {
+
+    .dwSelect {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+
+
+
+    .news-head{
+      height:100px;
+    }
+
+    #yhteystiedot{
+      i {
+        font-size: 3rem;
+        color: @light;
+        margin: 20px;
+
+      }
+    }
+
+    .readmore{
+      color:transparent;
+      height: 100%;
+      color:@tangerine;
+    }
+
+
+     h2 {
       font-size: 1.5rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    p {
+      text-align: left;
     }
 
     .news-ball {
@@ -605,6 +653,7 @@ a:hover {
       font-size: 10px;
       line-height: 30px;
       margin: 2px;
+      padding:4px;
     }
 
     .ball {
@@ -632,4 +681,3 @@ a:hover {
     color: white;
   }
 
-}

@@ -16,11 +16,11 @@ body {
   text-align: center;
 }
 h1,
-h2 {
+h2,
+h3 {
   font-family: Campton-B;
   color: #76787b;
 }
-h3,
 h4,
 h5,
 h6,
@@ -56,6 +56,11 @@ a:hover {
   color: white;
   background: #f79952;
   padding: 10px;
+}
+.uusi {
+  font-size: 85px !important;
+  color: white;
+  position: relative;
 }
 #sysartilaiset {
   display: -webkit-box;
@@ -218,7 +223,7 @@ a:hover {
 .row .row-start {
   opacity: 0;
 }
-.row .author {
+.author {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -226,7 +231,7 @@ a:hover {
   justify-content: center;
   border-radius: 50%;
 }
-.row .ball {
+.ball {
   margin: auto;
   background-color: #f79952;
   border: 1px solid #76787b;
@@ -235,31 +240,31 @@ a:hover {
   transition: all 0.3s ease, background-position 1ms;
   border-radius: 50%;
 }
-.row .ball h2 {
+.ball h2 {
   color: #f7f7ed;
   line-height: 150px;
 }
-.row .ball i {
+.ball i {
   font-size: 150px;
   line-height: 250px;
   color: white;
 }
-.row .row h2 {
-  font-size: 40px;
+h2 {
+  font-size: 2rem;
   text-align: center;
 }
-.row .piece-of-news {
+.piece-of-news {
   transition: 1s;
   float: left !important;
 }
-.row .piece-of-news:hover .readmore {
+.piece-of-news:hover .readmore {
   opacity: 1;
   transition: 1s;
 }
-.row .hide-news {
+.hide-news {
   height: 0px;
 }
-.row .news-ball {
+.news-ball {
   border: 5px solid grey;
   float: left !important;
   width: 150px;
@@ -269,39 +274,32 @@ a:hover {
   background-size: cover;
   background-position: 50%;
 }
-.row .news-content {
+.news-content {
   display: none;
   height: auto;
   padding-bottom: 50px;
 }
-.row #ura .plus {
+.news-head h3 {
+  text-align: left;
+}
+#twitter .bird {
   font-size: 100px;
   color: #76787b;
   padding: 30px;
 }
-.row #twitter .bird {
-  font-size: 100px;
-  color: #76787b;
-  padding: 30px;
-}
-.row #twitter .bubble {
-  font-size: 50px;
-  float: right;
-  color: #76787b;
-}
-.row #twitter .tweet {
+#twitter .tweet {
   padding: 30px;
   border-radius: 10px;
   z-index: 2;
 }
-.row #twitter .tweet p {
+#twitter .tweet p {
   font-size: 20px;
   word-break: break-word;
 }
-.row .spin {
+.spin {
   transform: rotate(180deg) !important;
 }
-.row .news-head {
+.news-head {
   height: 150px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -311,7 +309,7 @@ a:hover {
   align-content: center;
   flex-direction: column;
 }
-.row .readmore {
+.readmore {
   color: white;
   opacity: 0;
   width: 100%;
@@ -324,52 +322,62 @@ a:hover {
   transition: 1s;
   z-index: 9;
 }
-.row .uraMahdollisuus {
+#ura {
+  margin-bottom: 100px;
+}
+.uraMahdollisuus {
   background: #76787b;
   margin: 5px;
   padding: 10px 20px 10px 20px;
 }
-.row .uraMahdollisuus .tyopaikka {
+.uraMahdollisuus .tyopaikka {
   margin: 0;
 }
-.row .uraMahdollisuus p {
+.uraMahdollisuus p {
   color: white;
   padding: 0;
 }
-.row .uraInfo {
+.uraInfo {
   padding-top: 10px;
   display: none;
 }
-.row .uraInfo p {
+.uraInfo p {
   text-align: left;
 }
-.row .readmore:hover {
+.readmore:hover {
   color: #f79952;
 }
-.row .dwtitle {
+.dwtitle {
   font-family: Campton-l;
   font-size: 1rem;
 }
-.row .dwSelect {
+.dwSelect {
+  color: white;
   font-family: Campton-B;
   font-size: 1.5rem;
+  background: #76787b;
+  padding: 5px;
+  margin: 5px;
 }
-.row .dwdivider {
+.valittu {
+  color: #f79952 !important;
+}
+.dwdivider {
   font-family: Campton-l;
   font-size: 1.5rem;
 }
-.row .faceball-holder {
+.faceball-holder {
   width: 150px;
   margin: 5px;
 }
-.row .faceball-holder .dwi {
+.faceball-holder .dwi {
   position: relative;
   transition: 1s;
 }
-.row .faceball-holder .ddwi {
+.faceball-holder .ddwi {
   top: -10000px !important;
 }
-.row .faceball-holder .name {
+.faceball-holder .name {
   display: none;
   position: absolute;
   background: #76787b;
@@ -379,10 +387,10 @@ a:hover {
   font-size: 0.8rem;
   line-height: 0.8rem;
 }
-.row .faceball-holder span {
+.faceball-holder span {
   color: white;
 }
-.row .face-ball {
+.face-ball {
   border: 5px solid #76787b;
   width: 100px;
   height: 100px;
@@ -392,119 +400,145 @@ a:hover {
   background-size: cover;
   background-position: 50%;
 }
-.row #yhteystiedot {
+#yhteystiedot {
   background-color: #76787b;
   font-family: Campton-L;
 }
-.row #yhteystiedot h3 {
+#yhteystiedot h3 {
   font-family: Campton-B;
   color: #f7f7ed;
   margin: 0px;
   margin-top: 20px;
 }
-.row #yhteystiedot li {
+#yhteystiedot li {
   text-align: center;
   width: 80px;
   height: 80px;
 }
-.row #yhteystiedot i {
+#yhteystiedot i {
   font-size: 5rem;
   color: #f7f7ed;
   margin: 20px;
 }
-.row #yhteystiedot i:hover {
+#yhteystiedot i:hover {
   color: #f79952;
 }
-.row #yhteystiedot .address {
+#yhteystiedot .address {
   position: relative;
   z-index: 2;
 }
-.row #yhteystiedot .markerHolder {
+#yhteystiedot .markerHolder {
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 1;
 }
-.row #yhteystiedot .marker {
+#yhteystiedot .marker {
   font-size: 1.5rem;
   margin: 0;
   margin-left: 10px;
 }
-.row .asiakkaat {
+.asiakkaat {
   text-align: center;
 }
-.row .customer-logo {
+.customer-logo {
   border: 5px solid #76787b;
 }
-.row .happy-customer {
+.happy-customer {
   float: left !important;
   padding: 10px;
   text-align: center;
 }
-.row .happy-customer img {
+.happy-customer img {
   background: white;
 }
-.row #marker {
+#marker {
   text-align: center;
   font-size: 240px !important;
   line-height: 100px;
   margin-top: -100px;
   color: #f79952;
 }
-.row .nav a:hover {
+.nav a:hover {
   background: #f79952;
 }
-.row .avoimet {
+.avoimet {
   text-align: left;
 }
 @media only screen and (max-width: 750px) {
-  .row h2 {
-    font-size: 1.5rem;
+  .dwSelect {
+    font-size: 1rem;
+    line-height: 2rem;
   }
-  .row .news-ball {
+  .news-head {
+    height: 100px;
+  }
+  #yhteystiedot i {
+    font-size: 3rem;
+    color: #f7f7ed;
+    margin: 20px;
+  }
+  .readmore {
+    color: transparent;
+    height: 100%;
+    color: #f79952;
+  }
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  p {
+    text-align: left;
+  }
+  .news-ball {
     width: 75px;
     height: 75px;
     border: 1px solid #76787b;
     transition: 1s;
   }
-  .row #header {
+  #header {
     height: 100px;
     background: white;
     transition: .5s;
   }
-  .row #header #logo {
+  #header #logo {
     padding-top: 25px;
     display: none;
   }
-  .row #header #logo img {
+  #header #logo img {
     height: 50px;
   }
-  .row .ghost-start {
+  .ghost-start {
     height: 50px !important;
     transition: all 1s;
   }
-  .row .nav a {
+  .nav a {
     font-size: 10px;
     line-height: 30px;
     margin: 2px;
+    padding: 4px;
   }
-  .row .ball {
+  .ball {
     width: 100px !important;
     height: 100px !important;
     margin: 0px !important;
     transition: all 0.3s ease, background-position 1ms;
   }
-  .row .ball h2 {
+  .ball h2 {
     line-height: 100px !important;
     font-size: 2rem;
     transition: all 0.3s ease, background-position 1ms;
   }
 }
-.row ::selection {
+::selection {
   background: #f36421;
   color: white;
 }
-.row ::-moz-selection {
+::-moz-selection {
   background: #f36421;
   color: white;
 }
