@@ -18,7 +18,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: Campton-B;
+  font-family: 'Campton-B', Fallback, sans-serif;
   color: #76787b;
 }
 h4,
@@ -28,7 +28,7 @@ p,
 a,
 ul,
 li {
-  font-family: Campton-L;
+  font-family: 'Campton-L', Fallback, sans-serif;
 }
 h2 {
   font-size: 2rem;
@@ -355,12 +355,12 @@ h2 {
   color: #f79952;
 }
 .dwtitle {
-  font-family: Campton-l;
+  font-family: 'Campton-L', Fallback, sans-serif;
   font-size: 1rem;
 }
 .dwSelect {
   color: white;
-  font-family: Campton-B;
+  font-family: 'Campton-B', Fallback, sans-serif;
   font-size: 1.5rem;
   background: #f79952;
   padding: 5px;
@@ -375,7 +375,7 @@ h2 {
   background: #f36421 !important;
 }
 .dwdivider {
-  font-family: Campton-l;
+  font-family: 'Campton-L', Fallback, sans-serif;
   font-size: 1.5rem;
 }
 .faceball-holder {
@@ -395,7 +395,7 @@ h2 {
   background: #76787b;
   margin-top: -30px;
   width: 150px;
-  font-family: Campton-L;
+  font-family: 'Campton-L', Fallback, sans-serif;
   font-size: 0.8rem;
   line-height: 0.8rem;
 }
@@ -414,10 +414,10 @@ h2 {
 }
 #yhteystiedot {
   background-color: #76787b;
-  font-family: Campton-L;
+  font-family: 'Campton-L', Fallback, sans-serif;
 }
 #yhteystiedot h3 {
-  font-family: Campton-B;
+  font-family: 'Campton-B', Fallback, sans-serif;
   color: #f7f7ed;
   margin: 0px;
   margin-top: 20px;
