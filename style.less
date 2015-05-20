@@ -445,13 +445,20 @@ a:hover {
     color:white;
     font-family: Campton-B;
     font-size: 1.5rem;
-    background: @ash;
+    background: @tangerine;
     padding: 5px;
     margin: 5px;
+    border-bottom: 2px solid @orange;
+    cursor:pointer;
   }
 
+.dwSelect:hover {
+  background: @orange;
+}
+
 .valittu{
-  color: @tangerine !important;
+  background: @orange !important;
+
 }
 
   .dwdivider {
@@ -550,6 +557,11 @@ a:hover {
       font-size: 1.5rem;
       margin: 0;
       margin-left: 10px;
+      color:@tangerine;
+      cursor:pointer;
+
+      &:hover{color:@orange;}
+
     }
 
   }
@@ -706,3 +718,19 @@ a:hover {
     color: white;
   }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 8px;
+  height:5px;
+}
+::-webkit-scrollbar-track {
+  background:@ash-light;
+}
+::-webkit-scrollbar-thumb {
+  background:@orange;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:@orange;
+}
