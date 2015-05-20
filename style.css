@@ -335,6 +335,7 @@ h2 {
   background: #76787b;
   margin: 5px;
   padding: 10px 20px 10px 20px;
+  cursor: pointer;
 }
 .uraMahdollisuus .tyopaikka {
   margin: 0;
