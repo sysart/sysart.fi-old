@@ -328,6 +328,7 @@ a:hover {
   background: #76787b;
   margin: 5px;
   padding: 10px 20px 10px 20px;
+  cursor: pointer;
 }
 .row .uraMahdollisuus .tyopaikka {
   margin: 0;
