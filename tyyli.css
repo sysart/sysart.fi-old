@@ -367,6 +367,10 @@ h2 {
   margin: 5px;
   border-bottom: 2px solid #f36421;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
 }
 .dwSelect:hover {
   background: #f36421;
@@ -381,6 +385,7 @@ h2 {
 .faceball-holder {
   width: 150px;
   margin: 5px;
+  float: left;
 }
 .faceball-holder .dwi {
   position: relative;
@@ -411,6 +416,9 @@ h2 {
   transition: 1s;
   background-size: cover;
   background-position: 50%;
+}
+#sysartilaiset .faceball-holder {
+  float: left;
 }
 #yhteystiedot {
   background-color: #76787b;
@@ -561,11 +569,18 @@ h2 {
   }
 }
 ::selection {
-  background: #f36421;
+  background: transparent;
   color: white;
 }
 ::-moz-selection {
-  background: #f36421;
+  background: transparent;
+  color: white;
+}
+p::selection,
+h2::selection,
+h3::selection,
+a::selection {
+  background: #f79952;
   color: white;
 }
 ::-webkit-scrollbar {

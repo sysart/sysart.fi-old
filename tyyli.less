@@ -453,6 +453,10 @@ a:hover {
     margin: 5px;
     border-bottom: 2px solid @orange;
     cursor:pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
   }
 
 .dwSelect:hover {
@@ -461,7 +465,6 @@ a:hover {
 
 .valittu{
   background: @orange !important;
-
 }
 
   .dwdivider {
@@ -472,6 +475,7 @@ a:hover {
   .faceball-holder {
     width: 150px;
     margin: 5px;
+    float:left;
 
     .dwi {
       position: relative;
@@ -513,8 +517,8 @@ a:hover {
     background-position: 50%;
   }
 
-  .name {
-
+  #sysartilaiset .faceball-holder{
+    float:left;
   }
 
   #yhteystiedot {
@@ -711,15 +715,28 @@ a:hover {
 
   }
 
+
+
+
+
   ::selection {
-    background: @orange;
+    background: transparent;
     color: white;
   }
 
   ::-moz-selection {
-    background: @orange;
+    background: transparent;
     color: white;
   }
+
+  p::selection, h2::selection, h3::selection, a::selection {
+    background: @tangerine;
+    color: white;
+  }
+
+
+
+
 
 ::-webkit-scrollbar {
   width: 8px;
