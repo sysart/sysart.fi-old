@@ -41,6 +41,7 @@ p {
 }
 a {
   color: #f79952;
+  word-break: break-all;
 }
 a:visited {
   color: #f79952;
