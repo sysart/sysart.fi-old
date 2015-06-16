@@ -73,15 +73,21 @@ a:hover {
   padding: 10px;
 }
 
-
-.uusi{
-  font-size: 85px !important;
-  color:white;
-  position:relative;
+.uusi {
+  font-size: 60px !important;
+  padding: 15px !important;
+  color: white;
+  position: relative;
 }
 
+.oranssi{
+  color: @tangerine !important;
+  font-family: Campton-B;
+  margin-bottom: 2px !important;
+  line-height: 1rem;
+}
 
-#sysartilaiset{
+#sysartilaiset {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -144,11 +150,10 @@ a:hover {
   transition: 2s;
   text-align: center;
 
-  #logo-small{
-    width:100%;
+  #logo-small {
+    width: 100%;
     text-align: center;
   }
-
 
   img {
     height: 30px;
@@ -279,478 +284,472 @@ a:hover {
   opacity: 0;
 }
 
-  .author {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    border-radius: 50%;
+.author {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.ball {
+  margin: auto;
+  background-color: @tangerine;
+  border: 1px solid @ash;
+  width: 250px !important;
+  height: 250px !important;
+  transition: all 0.3s ease, background-position 1ms;
+  border-radius: 50%;
+
+  h2 {
+    color: @light;
+    line-height: 150px;
   }
 
-  .ball {
-    margin: auto;
-    background-color: @tangerine;
-    border: 1px solid @ash;
-    width: 250px !important;
-    height: 250px !important;
-    transition: all 0.3s ease, background-position 1ms;
-    border-radius: 50%;
+  i {
+    font-size: 150px;
+    line-height: 250px;
+    color: white;
+  }
 
-    h2 {
-      color: @light;
-      line-height: 150px;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.piece-of-news {
+  transition: 1s;
+  float: left !important;
+}
+
+.piece-of-news:hover .readmore > {
+  opacity: 1;
+  transition: 1s;
+}
+
+.hide-news {
+  height: 0px;
+}
+
+.news-ball {
+  border: 5px solid grey;
+  float: left !important;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: 1s;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.news-content {
+  display: none;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.news-head h3 {
+  text-align: left;
+}
+
+#twitter {
+
+  .bird {
+    font-size: 100px;
+    color: @ash;
+    padding: 30px;
+  }
+
+  .tweet {
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 2;
+
+    p {
+      font-size: 20px;
+      word-break: break-word;
     }
-
-    i {
-      font-size: 150px;
-      line-height: 250px;
-      color: white;
-    }
-
   }
 
-   h2 {
-    font-size: 2rem;
-    text-align: center;
+}
+
+.spin {
+  -webkit-transform: rotate(180deg) !important;
+  -ms-transform: rotate(180deg) !important;
+  transform: rotate(180deg) !important;
+
+}
+
+.news-head {
+  height: 150px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.readmore {
+  color: white;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  height: 50px;
+  font-size: 50px !important;
+  transition: 1s;
+  transition: 1s;
+  z-index: 9;
+}
+
+#ura {
+  margin-bottom: 100px;
+}
+
+.uraMahdollisuus {
+  background: @ash;
+  margin: 5px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+
+  .tyopaikka {
+    margin: 0;
+    font-size: 1.5rem;
+    color: @tangerine;
+    font-family: Campton-B;
   }
 
-  .piece-of-news {
-    transition: 1s;
-    float: left !important;
+  p {
+    color: white;
+    padding: 0;
   }
 
-  .piece-of-news:hover .readmore > {
-    opacity: 1;
-    transition: 1s;
-  }
+}
 
-  .hide-news {
-    height: 0px;
-  }
-
-  .news-ball {
-    border: 5px solid grey;
-    float: left !important;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: 1s;
-    background-size: cover;
-    background-position: 50%;
-  }
-
-  .news-content {
-    display: none;
-    height: auto;
-    padding-bottom: 50px;
-  }
-
-
-  .news-head h3 {
+.uraInfo {
+  padding-top: 10px;
+  display: none;
+  cursor:default;
+  p {
     text-align: left;
   }
+}
 
-  #twitter {
+.readmore:hover {
+  color: @tangerine;
+}
 
-    .bird {
-      font-size: 100px;
-      color: @ash;
-      padding: 30px;
-    }
+.dwtitle {
+  font-family: 'Campton-L', Fallback, sans-serif;;
+  font-size: 1rem;
+}
 
-
-    .tweet {
-      padding: 30px;
-      border-radius: 10px;
-      z-index: 2;
-
-      p {
-        font-size: 20px;
-        word-break: break-word;
-      }
-    }
-
-  }
-
-  .spin {
-    -webkit-transform: rotate(180deg) !important;
-    -ms-transform: rotate(180deg) !important;
-    transform: rotate(180deg) !important;
-
-  }
-
-  .news-head {
-    height: 150px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-  }
-
-  .readmore {
-    color: white;
-    opacity: 0;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    height: 50px;
-    font-size: 50px !important;
-    transition: 1s;
-    transition: 1s;
-    z-index: 9;
-  }
-
-  #ura{
-    margin-bottom:100px;
-  }
-
-  .uraMahdollisuus {
-    background: @ash;
-    margin: 5px;
-    padding: 10px 20px 10px 20px;
-    cursor:pointer;
-
-    .tyopaikka {
-      margin: 0;
-    }
-
-    p {
-      color: white;
-      padding: 0;
-    }
-
-  }
-
-  .uraInfo {
-    padding-top: 10px;
-    display: none;
-    p {
-      text-align: left;
-    }
-  }
-
-  .readmore:hover {
-    color: @tangerine;
-  }
-
-  .dwtitle {
-    font-family: 'Campton-L', Fallback, sans-serif;;
-    font-size: 1rem;
-  }
-
-  .dwSelect {
-    color:white;
-    font-family: 'Campton-B', Fallback, sans-serif;;
-    font-size: 1.5rem;
-    background: @tangerine;
-    padding: 5px;
-    margin: 5px;
-    border-bottom: 2px solid @orange;
-    cursor:pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -ms-user-select: none;
-  }
+.dwSelect {
+  color: white;
+  font-family: 'Campton-B', Fallback, sans-serif;;
+  font-size: 1.5rem;
+  background: @tangerine;
+  padding: 5px;
+  margin: 5px;
+  border-bottom: 2px solid @orange;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
 
 .dwSelect:hover {
   background: @orange;
 }
 
-.valittu{
+.valittu {
   background: @orange !important;
 }
 
-  .dwdivider {
-    font-family: 'Campton-L', Fallback, sans-serif;;
-    font-size: 1.5rem;
-  }
+.dwdivider {
+  font-family: 'Campton-L', Fallback, sans-serif;;
+  font-size: 1.5rem;
+}
 
-  .faceball-holder {
-    width: 150px;
-    margin: 5px;
-    float:left;
+.faceball-holder {
+  width: 150px;
+  margin: 5px;
+  float: left;
 
-    .dwi {
-      position: relative;
-      transition: 1s;
-    }
-    .ddwi {
-      top: -10000px !important;
-    }
-
-    .name {
-      display: none;
-      position: absolute;
-      background: @ash;
-      margin-top: -30px;
-      width: 150px;
-      font-family: 'Campton-L', Fallback, sans-serif;;
-      font-size: 0.8rem;
-      line-height: 0.8rem;
-    }
-
-    span {
-      color: white;
-    }
-
-    .jobTitle{
-
-    }
-
-  }
-
-  .face-ball {
-    border: 5px solid @ash;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: auto;
+  .dwi {
+    position: relative;
     transition: 1s;
-    background-size: cover;
-    background-position: 50%;
+  }
+  .ddwi {
+    top: -10000px !important;
   }
 
-  #sysartilaiset .faceball-holder{
-    float:left;
+  .name {
+    display: none;
+    position: absolute;
+    background: @ash;
+    margin-top: -30px;
+    width: 150px;
+    font-family: 'Campton-L', Fallback, sans-serif;;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+  }
+
+  span {
+    color: white;
+  }
+
+  .jobTitle {
+
+  }
+
+}
+
+.face-ball {
+  border: 5px solid @ash;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto;
+  transition: 1s;
+  background-size: cover;
+  background-position: 50%;
+}
+
+#sysartilaiset .faceball-holder {
+  float: left;
+}
+
+#yhteystiedot {
+  background-color: @ash;
+  font-family: 'Campton-L', Fallback, sans-serif;;
+
+  h3 {
+    font-family: 'Campton-B', Fallback, sans-serif;;
+    color: @light;
+    margin: 0px;
+    margin-top: 20px;
+  }
+
+  li {
+    text-align: center;
+    width: 80px;
+    height: 80px;
+  }
+
+  i {
+    font-size: 5rem;
+    color: @light;
+    margin: 20px;
+
+  }
+  i:hover {
+    color: @tangerine;
+  }
+
+  .address {
+    position: relative;
+    z-index: 2;
+  }
+
+  .markerHolder {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .marker {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-left: 10px;
+    color: @tangerine;
+    cursor: pointer;
+
+    &:hover {
+      color: @orange;
+    }
+
+  }
+
+}
+
+.asiakkaat {
+  text-align: center;
+}
+
+.customer-logo {
+  border: 5px solid @ash;
+}
+
+.happy-customer {
+  float: left !important;
+  padding: 10px;
+  text-align: center;
+  img {
+    background: white;
+  }
+}
+
+#marker {
+  text-align: center;
+  font-size: 240px !important;
+  line-height: 100px;
+  margin-top: -100px;
+  color: @tangerine;
+}
+
+.nav a:hover {
+  background: @tangerine;
+}
+
+.avoimet {
+  text-align: left;
+}
+
+@media only screen and (max-width: 750px) {
+
+  .dwSelect {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .news-head {
+    height: 100px;
+
+    h3 {
+      line-height: 1rem;
+
+      .date {
+        font-size: 10px;
+      }
+    }
+
   }
 
   #yhteystiedot {
-    background-color: @ash;
-    font-family: 'Campton-L', Fallback, sans-serif;;
-
-    h3 {
-      font-family: 'Campton-B', Fallback, sans-serif;;
-      color: @light;
-      margin: 0px;
-      margin-top: 20px;
-    }
-
-    li {
-      text-align: center;
-      width: 80px;
-      height: 80px;
-    }
-
     i {
-      font-size: 5rem;
+      font-size: 3rem;
       color: @light;
       margin: 20px;
 
     }
-    i:hover {
-      color: @tangerine;
-    }
-
-    .address {
-      position: relative;
-      z-index: 2;
-    }
-
-    .markerHolder {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 1;
-    }
-
-    .marker {
-      font-size: 1.5rem;
-      margin: 0;
-      margin-left: 10px;
-      color:@tangerine;
-      cursor:pointer;
-
-      &:hover{color:@orange;}
-
-    }
-
   }
 
-  .asiakkaat {
+  .readmore {
+    color: transparent;
+    height: 100%;
+
+    &:hover {
+      color: transparent
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
     text-align: center;
   }
 
-  .customer-logo {
-    border: 5px solid @ash;
-  }
-
-  .happy-customer {
-    float: left !important;
-    padding: 10px;
+  h3 {
+    font-size: 1.1rem;
     text-align: center;
-    img {
-      background: white;
-    }
   }
 
-  #marker {
-    text-align: center;
-    font-size: 240px !important;
-    line-height: 100px;
-    margin-top: -100px;
-    color: @tangerine;
-  }
-
-  .nav a:hover {
-    background: @tangerine;
-  }
-
-  .avoimet {
+  p {
     text-align: left;
   }
 
-  @media only screen and (max-width: 750px) {
+  .news-ball {
+    width: 75px;
+    height: 75px;
+    border: 1px solid @ash;
+    transition: 1s;
+  }
 
+  #header {
+    height: 100px;
+    background: white;
+    transition: .5s;
+    text-align: center;
 
-    .dwSelect {
-      font-size: 1rem;
-      line-height: 2rem;
-    }
+    #logo {
+      padding-top: 25px;
+      display: none;
 
-
-
-    .news-head{
-      height:100px;
-
-      h3{
-        line-height:1rem;
-
-        .date {
-          font-size: 10px;
-        }
+      img {
+        height: 50px;
       }
-
-
-
-    }
-
-    #yhteystiedot{
-      i {
-        font-size: 3rem;
-        color: @light;
-        margin: 20px;
-
-      }
-    }
-
-    .readmore{
-      color:transparent;
-      height: 100%;
-
-      &:hover{
-        color:transparent
-      }
-    }
-
-
-     h2 {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    h3 {
-      font-size: 1.1rem;
-      text-align: center;
-    }
-
-    p {
-      text-align: left;
-    }
-
-    .news-ball {
-      width: 75px;
-      height: 75px;
-      border: 1px solid @ash;
-      transition: 1s;
-    }
-
-    #header {
-      height: 100px;
-      background: white;
-      transition: .5s;
-      text-align: center;
-
-      #logo {
-        padding-top: 25px;
-        display: none;
-
-        img {
-          height: 50px;
-        }
-      }
-
-    }
-
-    .ghost-start {
-      height: 50px !important;
-      transition: all 1s;
-    }
-
-    .nav a {
-      font-size: 10px;
-      line-height: 30px;
-      margin: 2px;
-      padding:4px;
-    }
-
-    .ball {
-      width: 100px !important;
-      height: 100px !important;
-      margin: 0px !important;
-      transition: all 0.3s ease, background-position 1ms;
-    }
-
-    .ball h2 {
-      line-height: 100px !important;
-      font-size: 2rem;
-      transition: all 0.3s ease, background-position 1ms;
     }
 
   }
 
-
-
-
-
-  ::selection {
-    background: transparent;
-    color: white;
+  .ghost-start {
+    height: 50px !important;
+    transition: all 1s;
   }
 
-  ::-moz-selection {
-    background: transparent;
-    color: white;
+  .nav a {
+    font-size: 10px;
+    line-height: 30px;
+    margin: 2px;
+    padding: 4px;
   }
 
-  p::selection, h2::selection, h3::selection, a::selection {
-    background: @tangerine;
-    color: white;
+  .ball {
+    width: 100px !important;
+    height: 100px !important;
+    margin: 0px !important;
+    transition: all 0.3s ease, background-position 1ms;
   }
 
+  .ball h2 {
+    line-height: 100px !important;
+    font-size: 2rem;
+    transition: all 0.3s ease, background-position 1ms;
+  }
 
+}
 
+::selection {
+  background: transparent;
+  color: white;
+}
 
+::-moz-selection {
+  background: transparent;
+  color: white;
+}
+
+p::selection, h2::selection, h3::selection, a::selection {
+  background: @tangerine;
+  color: white;
+}
 
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-button {
   width: 8px;
-  height:5px;
+  height: 5px;
 }
+
 ::-webkit-scrollbar-track {
-  background:@ash-light;
+  background: @ash-light;
 }
+
 ::-webkit-scrollbar-thumb {
-  background:@orange;
+  background: @orange;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background:@orange;
+  background: @orange;
 }

@@ -57,9 +57,16 @@ a:hover {
   padding: 10px;
 }
 .uusi {
-  font-size: 85px !important;
+  font-size: 60px !important;
+  padding: 15px !important;
   color: white;
   position: relative;
+}
+.oranssi {
+  color: #f79952 !important;
+  font-family: Campton-B;
+  margin-bottom: 2px !important;
+  line-height: 1rem;
 }
 #sysartilaiset {
   display: -webkit-box;
@@ -339,6 +346,9 @@ h2 {
 }
 .uraMahdollisuus .tyopaikka {
   margin: 0;
+  font-size: 1.5rem;
+  color: #f79952;
+  font-family: Campton-B;
 }
 .uraMahdollisuus p {
   color: white;
@@ -347,6 +357,7 @@ h2 {
 .uraInfo {
   padding-top: 10px;
   display: none;
+  cursor: default;
 }
 .uraInfo p {
   text-align: left;
