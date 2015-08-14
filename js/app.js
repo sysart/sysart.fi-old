@@ -21,6 +21,8 @@ var gotoHash = function(){
 
 
 
+
+
 /*  Scoroll to middle */
 
 var portHeight = $(window).height();
@@ -158,6 +160,7 @@ $(document).ready(function () {
 $(".uraMahdollisuus").children('.tyopaikka').on('click', function () {
 
     var info = $(this).siblings('.uraInfo');
+    var nappi = $(this).siblings('.nappi');
 
     if(info.is(':visible')){
         info.slideUp();
@@ -167,7 +170,8 @@ $(".uraMahdollisuus").children('.tyopaikka').on('click', function () {
         window.location.hash = "#" + $(this).parent().attr('id');
     }
 
-
+    if (nappi.hasClass("ympari")){nappi.removeClass("ympari");}
+    else{nappi.addClass("ympari");}
 
 
 });

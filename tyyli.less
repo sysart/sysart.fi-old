@@ -1,3 +1,10 @@
+.var-static .tweet.with-expansion {
+  cursor: default;
+  color:red !important;
+}
+
+
+
 /*Variables*/
 
 @font-face {
@@ -26,6 +33,11 @@
 ---------------------------------*/
 
 html, body {
+  background-image: url("img/myynti_tausta.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   background-color: @light;
   text-align: center;
 }
@@ -74,11 +86,27 @@ a:hover {
   padding: 10px;
 }
 
-.uusi {
-  font-size: 60px !important;
-  padding: 15px !important;
-  color: white;
+
+.lefty {
   position: relative;
+  height:100px;
+  text-align: center;
+}
+.leftyIcon {
+  i {
+    color: white;
+    font-size: 60px !important;
+    height:100px;
+    line-height: 100px;
+    width:100px;
+    border-radius: 100px;
+    background-color: @ash;
+  }
+}
+.upper{
+  float: left;
+  shape-outside: circle();
+  margin-right: 20px;
 }
 
 .oranssi{
@@ -171,7 +199,7 @@ a:hover {
   transition: .5s;
 
   #logo {
-    padding-top: 50px;
+    padding-top: 41px;
     display: none;
   }
 
@@ -269,6 +297,14 @@ a:hover {
   overflow: hidden;
 }
 
+.slogan {
+  margin-left: 105px;
+  margin-top: -7px;
+  font-size: 18px;
+  color: #76787B;
+  text-align: center;
+}
+
 .ghost-start {
   height: 100px !important;
 }
@@ -358,16 +394,11 @@ h2 {
 
 #twitter {
 
-  .bird {
-    font-size: 100px;
-    color: @ash;
-    padding: 30px;
-  }
 
   .tweet {
-    padding: 30px;
-    border-radius: 10px;
+    background: @ash;
     z-index: 2;
+    .uraMahdollisuus;
 
     p {
       font-size: 20px;
@@ -406,21 +437,47 @@ h2 {
   height: 50px;
   font-size: 50px !important;
   transition: 1s;
-  transition: 1s;
   z-index: 9;
 }
 
-#ura {
-  margin-bottom: 100px;
+.oi {
+  padding-bottom: 0;
 }
 
+.sisalto{
+  padding-top: 0;
+}
+
+.nappi{
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 35px !important;
+  color: white;
+  height: 35px;
+  width: 35px;
+  transition:0.5s;
+}
+.ympari{
+  -ms-transform: rotate(180deg) !important; /* IE 9 */
+  -webkit-transform: rotate(180deg) !important; /* Safari */
+  transform: rotate(180deg) !important;
+  transition:0.5s;
+}
+
+
 .uraMahdollisuus {
+  position: relative;
   background: @ash;
-  margin: 5px;
+  margin-bottom: 5px;
   padding: 10px 20px 10px 20px;
   cursor: pointer;
+  min-height: 60px;
+  border-radius: 30px;
 
   .tyopaikka {
+    padding-right: 50px;
     margin: 0;
     font-size: 1.5rem;
     color: @tangerine;
@@ -435,11 +492,23 @@ h2 {
 }
 
 .uraInfo {
+  position: relative;
   padding-top: 10px;
   display: none;
   cursor:default;
   p {
     text-align: left;
+  }
+
+  .jaa{
+    float:right;
+    height:100%;
+    width: 40px;
+    i {
+      font-size: 40px;
+      margin-top: 15px;
+      float: right;
+    }
   }
 }
 
@@ -614,6 +683,7 @@ h2 {
 
 .avoimet {
   text-align: left;
+  padding-left: 5px;
 }
 
 @media only screen and (max-width: 750px) {
@@ -754,3 +824,4 @@ p::selection, h2::selection, h3::selection, a::selection {
 ::-webkit-scrollbar-thumb:hover {
   background: @orange;
 }
+
