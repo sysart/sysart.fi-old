@@ -1,7 +1,7 @@
 /* Add Hash */
 
 $("article").each(function(){
-    var content = $(this).children('.showContent').text().toLowerCase().replace(/ |#|\//g, '-');
+    var content = $(this).children('.showContent').attr('id');
     $(this).attr('id', content);
 });
 
