@@ -177,8 +177,8 @@ a:focus {
   background: white;
   float: right;
   clear: right;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 5px;
+  padding: 8px;
   border-radius: 5px;
 }
 #topnav,
@@ -226,7 +226,7 @@ a:focus {
   text-align: center;
 }
 #header-small img {
-  height: 80px;
+  height: 50px;
   padding-top: 20px;
 }
 .preview {
