@@ -73,14 +73,15 @@
 </section>
 
 
-<section id="ullakko" class="content">
+<section id="topFloor" class="content">
 
 
-    <div id="ura" class="row row-start oi">
+    <div id="ura" class="row row-start sectionHead">
 
         <h2>Töihin! Meille!</h2>
-        <div class="small-12 columns ingressi">
-            <div class="show-for-small leftyIcon upper">
+
+        <div class="small-12 columns lead">
+            <div class="show-for-small leftyIcon imgInText">
                 <i class="fa fa-user-plus"></i>
             </div>
             <p>
@@ -91,7 +92,7 @@
 
     </div>
 
-    <div class="row row-start sisalto">
+    <div class="row row-start sectionBody">
         <div class="medium-2 columns show-for-medium-up lefty">
             <!-- Kuva -->
             <div class="leftyIcon">
@@ -99,16 +100,16 @@
             </div>
         </div>
 
-        <div class="small-12 medium-10 columns avoimet">
+        <div class="small-12 medium-10 columns ">
 
-            <div class="uraMahdollisuus">
+            <article class="article">
                 <i class="fa fa-chevron-down nappi"></i>
 
-                <p class="tyopaikka" id="lead_software_developer_oulu">
+                <p class="showContent" id="lead_software_developer_oulu">
                     Lead Software Developer Oulu
                 </p>
 
-                <div class="uraInfo">
+                <div class="articleContent">
                     <div class="hidden-for-small jaa">
                         <a href="https://www.facebook.com/sharer/sharer.php?u=http://goo.gl/UpBWFS">
                             <i title="Jaa ilmoitus Facebookissa" class="fa fa-facebook-square"></i>
@@ -185,17 +186,17 @@
 
                     <p><a href="#lead_software_developer_oulu">linkki ilmoitukseen</a>
                 </div>
-            </div>
+            </article>
 
 
-            <div class="uraMahdollisuus">
+            <article class="article">
                 <i class="fa fa-chevron-down nappi"></i>
 
-                <p class="tyopaikka" id="front_end_developer_oulu">
+                <p class="showContent" id="front_end_developer_oulu">
                     Front-end developer Oulu
                 </p>
 
-                <div class="uraInfo">
+                <div class="articleContent">
                     <div class="jaa">
                         <a href="https://www.facebook.com/sharer/sharer.php?u=http://goo.gl/xj3RGU">
                             <i title="Jaa ilmoitus Facebookissa" class="fa fa-facebook-square"></i>
@@ -250,13 +251,14 @@
                     <p><a href="#front_end_developer_oulu">linkki ilmoitukseen</a>
 
                 </div>
-            </div>
-            <div class="uraMahdollisuus">
+            </article>
+
+            <article class="article">
                 <i class="fa fa-chevron-down nappi"></i>
 
-                <p class="tyopaikka" id="java_csharp_developer_oulu">Java/C#-kehittäjiä Oulu</p>
+                <p class="showContent" id="java_csharp_developer_oulu">Java/C#-kehittäjiä Oulu</p>
 
-                <div class="uraInfo">
+                <div class="articleContent">
                     <div class="jaa">
                         <a href="https://www.facebook.com/sharer/sharer.php?u=http://goo.gl/XSiZYu">
                             <i title="Jaa ilmoitus Facebookissa" class="fa fa-facebook-square"></i>
@@ -312,13 +314,13 @@
 
                     <p><a href="#java_csharp_developer_oulu">linkki ilmoitukseen</a>
                 </div>
-            </div>
-            <div class="uraMahdollisuus">
+            </article>
+            <article class="article">
                 <i class="fa fa-chevron-down nappi"></i>
 
-                <p class="tyopaikka" id="open_oulu_helsinki">Avoin hakemus Helsinki / Oulu</p>
+                <p class="showContent" id="open_oulu_helsinki">Avoin hakemus Helsinki / Oulu</p>
 
-                <div class="uraInfo">
+                <div class="articleContent">
                     <div class="jaa">
                         <a href="https://www.facebook.com/sharer/sharer.php?u=http://goo.gl/t8jvxl">
                             <i title="Jaa ilmoitus Facebookissa" class="fa fa-facebook-square"></i>
@@ -345,7 +347,7 @@
                     <p><a href="#open_oulu_helsinki">linkki ilmoitukseen</a>
 
                 </div>
-            </div>
+            </article>
 
         </div>
 
@@ -777,7 +779,7 @@
         </div>
 
         <div class="small-12 medium-10 columns">
-            <div class="tweet">
+            <div class="twitterFlow">
                 <p>
                     <a class="twitter-timeline"
                        href="https://twitter.com/SysartOy"
@@ -804,7 +806,7 @@
 </section>
 <div id="headerstatic"></div>
 
-<div id="topnav" class="nav-start">
+<div id="topnav" class="nav-start ">
     <nav class="nav">
         <a href="#ura">Ura</a>
         <a href="#ihmiset">Ihmiset</a>
@@ -813,17 +815,20 @@
 </div>
 
 <section id="header-small" class="hide">
-    <div id="logo-small">
-        <img src="img/logo/sysart_127x30.png" alt="Sysart logo small">
+    <div class="hamburger"><i class="fa fa-bars"></i></div>
+    <div id="logoSmall">
+        <img src="img/logo/sysart_425x100.png" alt="Sysart logo medium">
     </div>
 </section>
 
 <section id="header" class="header-start">
     <div class="small-12 columns">
+        <div class="mobileHamburger"><i class="fa fa-bars"></i></div>
         <div id="logo">
             <img src="img/logo/sysart_425x100.png" alt="Sysart logo medium">
+            <p class="hidden-for-small slogan">digitaalisten palveluiden ytimessä</p>
 
-            <p class="slogan">digitaalisten palveluiden ytimessä</p>
+
         </div>
 
 
@@ -831,7 +836,7 @@
 </section>
 
 <div id="bottomnav" class="nav-start">
-    <nav class="nav">
+    <nav>
         <a href="#ajankohtaistaA">Ajankohtaista</a>
         <a href="#palvelutA">Palvelut</a>
         <a href="#asiakkaatA">Asiakkaat</a>
@@ -839,243 +844,365 @@
     </nav>
 </div>
 
-<section id="basement" class="content">
+<div id="mobileNav" class="nav-start">
+    <nav>
+        <a href="#ura">Ura</a>
+        <a href="#ihmiset">Ihmiset</a>
+        <a href="#blogit">Blogit</a>
+        <a href="#ajankohtaistaA">Ajankohtaista</a>
+        <a href="#palvelutA">Palvelut</a>
+        <a href="#asiakkaatA">Asiakkaat</a>
+        <a href="#yhteystiedot">Yhteystiedot</a>
+    </nav>
+</div>
 
 
-    <!-- UUTISET -->
+
+<section id="groundFloor" class="content">
+
+    <!--  section  -->
     <a id="ajankohtaistaA" class="ankkuri"></a>
 
     <div id="ajankohtaista" class="row row-start">
-        <h2 class="small-12 columns">AJANKOHTAISTA</h2>
 
 
-        <!-- Yksi uutinen-->
-        <div class="small-12 large-10 large-offset-1 columns piece-of-news preview">
-            <i class="readmore fa fa-chevron-down"></i>
+        <!--  section header  -->
+        <h2>AJANKOHTAISTA</h2>
 
-            <div class="small-3 columns news-head">
-                <!-- Kuva -->
-                <div style="background-image: url(img/news/verohallinto.png);" class="news-ball">
-                </div>
-            </div>
-            <div class="small-9 columns news-head">
-                <!-- Otsikko -->
-                <h3>Verohallinnon chatin suosio yllätti
-                    <span class="date"><br>16.6.2015</span></h3>
-            </div>
 
-            <div class="news-content hide-news small-12 medium-9 medium-offset-3 columns">
-                <!-- Sisältö -->
-                <p>Verohallinto valitsi Sysartin monikanavaisen verkkoasiakaspalvelun toimittajaksi.
-                    Verkkoasiakaspalvelun
-                    osa-alueista chat-palvelu tarjoaa asiakkaille nopean ja interaktiivisen tavan hakea apua verotusta
-                    koskeviin ongelmiinsa.</p>
+        <div class="small-12 columns lead">
+            <div class="show-for-small leftyIcon imgInText">
+                <i class="fa fa-newspaper-o"></i>
 
-                <p>Veroilmoitus verkossa -palvelussa chat oli ylivoimainen asiakaspalvelukanava. Chat-palvelu on ollut
-                    käytössä huhtikuun alusta saakka ja jo yli 10 000 asiakasta on saanut apua veroasioissa. Lähes 90 %
-                    yhteydenotoista tuli chatin kautta. Toiseksi tuli puhelin 10 %:n osuudella, kun taas kirjallisia
-                    tukipyyntöjä tehtiin vain kourallinen.</p>
-
-                <p>Lisää aiheesta Verohallinnon tiedotteesta:<br>
-                    <a target="_blank"
-                       href="http://vero.fi/fi-FI/Tietoa_Verohallinnosta/Tiedotteet/Uutisia/Chatin_suosio_yllatti%2837710%29">http://vero.fi/fi-FI/Tietoa_Verohallinnosta/Tiedotteet/Uutisia/Chatin_suosio_yllatti%2837710%29</a>
-                </p>
-
-                <p>Sekä yksityiskohtaisempia tuloksia:<br>
-                    <a target="_blank"
-                       href="http://www.slideshare.net/Verohallinto/verohallinto-chatpilotin-kokemukset">http://www.slideshare.net/Verohallinto/verohallinto-chatpilotin-kokemukset</a>
-                </p>
-
-                <p>Verohallinto on valinnut Sysartin monikanavaisen verkkoasiakaspalvelun toimittajaksi. Uuden palvelun
-                    avulla verottaja pystyy yhdistämään aiemmat erillisratkaisut yhdeksi kokonaisuudeksi, mikä tehostaa
-                    asiakaspalvelua sekä tarjoaa asiakkaille yhden selkeän ja helposti lähestyttävän
-                    asiakaspalvelupisteen.
-                    Verkkoasiakaspalvelu tulee koostumaan kolmesta osasta: vastauspankki, Oma kysymys -palvelu sekä
-                    chat-palvelu.</p>
+                <p>Kasvamme vauhdikkaasti pääkaupunkiseudulla ja pyrimme pitämään kiinnostuneet ajan tasalla
+                    saavutuksistamme.</p>
             </div>
         </div>
-        <!-- Uutinen END -->
+    </div>
 
-
-        <!-- Yksi uutinen-->
-        <div class="small-12 large-10 large-offset-1 columns piece-of-news preview">
-            <i class="readmore fa fa-chevron-down"></i>
-
-            <div class="small-3 columns news-head">
-                <!-- Kuva -->
-                <div style="background-image: url(img/customers/s_espoo.png);" class="news-ball">
-                </div>
-            </div>
-            <div class="small-9 columns news-head">
-                <!-- Otsikko -->
-                <h3>Espoon hyvinvointipalveluiden sähköistys etenee
-                    <span class="date"><br>16.12.2014</span></h3>
-            </div>
-
-            <div class="news-content hide-news small-12 medium-9 medium-offset-3 columns">
-                <!-- Sisältö -->
-                <p>
-                    Espoon sosiaali- ja terveystoimen sähköisten palvelujen kehitys etenee vauhdilla. Nyt vuorossa on
-                    talous- ja velkaneuvonta, jossa on otettu käyttöön OmaTalous -verkkopalvelu.
-                </p>
-
-                <p>
-                    Palvelussa voi esittää kysymyksiä talous- ja velkaneuvojalle sekä löytää vastauksia usein
-                    kysyttyihin kysymyksiin. Lisäksi asiakas voi valmistautua henkilökohtaiseen tapaamiseen lähettämällä
-                    etukäteen sähköisellä lomakkeella omaa taloutta koskevia tietoja. Näin itse tapaamisella jää enemmän
-                    aikaa ratkaisujen etsimiseen.
-                </p>
-
-                <p>
-                    Aiemmin lokakuussa julkaistu OmaNeuvola -palvelu on saanut erittäin hyvän vastaanoton. Sekä
-                    asiakkaat että ammattilaiset ovat kehuneet palvelun selkeää käyttöliittymää ja helppokäyttöisyyttä.
-                    Tyytyväisyys on näkynyt myös käyttöaktiivisuudessa, sillä 86% neuvolan uusista asiakkaista on
-                    siirtynyt sähköisen palvelun käyttäjiksi.
-                </p>
-            </div>
-        </div>
-        <!-- Uutinen END -->
-
-        <!-- Yksi uutinen-->
-        <div class="small-12 large-10 large-offset-1 columns piece-of-news preview">
-            <i class="readmore fa fa-chevron-down"></i>
-
-            <div class="small-3 columns news-head">
-                <!-- Kuva -->
-                <div style="background-image: url(img/customers/s_vero.png);" class="news-ball">
-                </div>
-            </div>
-            <div class="small-9 columns news-head">
-                <!-- Otsikko -->
-                <h3>Sysart uudistaa Verohallinnon asiakaspalvelua
-                    <span class="date"><br>12.12.2014</span></h3>
-            </div>
-
-            <div class="news-content hide-news small-12 medium-9 medium-offset-3 columns">
-                <!-- Sisältö -->
-                <p> Verohallinto on valinnut Sysartin monikanavaisen verkkoasiakaspalvelun toimittajaksi. Uuden palvelun
-                    avulla verottaja pystyy yhdistämään aiemmat erillisratkaisut yhdeksi kokonaisuudeksi, mikä tehostaa
-                    asiakaspalvelua sekä tarjoaa asiakkaille yhden selkeän ja helposti lähestyttävän
-                    asiakaspalvelupisteen.
-                </p>
-
-                <p> Verkkoasiakaspalvelu tulee koostumaan kolmesta osasta. Vastauspankkiin kerätään laaja kokoelma
-                    vastauksia asiakkaiden yleisimpiin kysymyksiin, mikä mahdollistaa useimmissa tapauksissa avun
-                    saamisen ilman yhteydenottoa asiakaspalveluun. Vastauspankissa oleva suuri tietomäärä tuodaan
-                    helpommin asiakkaiden käyttöön edistyksekkäällä oppivalla hakumoottorilla. Mikäli asiakas ei löydä
-                    valmista ratkaisua ongelmaansa vastauspankista, hän voi lähettää kysymyksiä asiakaspalveluun Oma
-                    kysymys -palvelun kautta. Tätä kautta tulevat yhteydenotot reititetään automaattisesti sopivien
-                    asiantuntijoiden työjonoihin ja sisäiseen tehtävän hallintaan. Kolmantena osiona chat-palvelu
-                    tarjoaa asiakkaille nopean ja interaktiivisen tavan hakea apua verotusta koskeviin ongelmiinsa.
-                </p>
-
-                <p> Ratkaisu perustuu Sysartin Requeste sähköisen asioinnin alustaan ja se otetaan käyttöön vaiheittain
-                    vuoden 2015 aikana. Projektista tarkemmin verohallinnon omilla sivuilla.
-                </p>
-
-                <p>Lisätietoja antaa toimitusjohtaja Petri Mäenpää +358 40 531 3841.</p>
+    <!--  section icon  -->
+    <div class="row row-start">
+        <div class="medium-2 columns show-for-medium-up lefty">
+            <!-- Kuva -->
+            <div class="leftyIcon">
+                <i class="fa fa-newspaper-o"></i>
             </div>
         </div>
 
-        <!-- Yksi uutinen-->
-        <div class="small-12 large-10 large-offset-1 columns piece-of-news preview">
-            <i class="readmore fa fa-chevron-down"></i>
+        <div class="small-12 medium-10 columns">
 
-            <div class="small-3 columns news-head">
-                <!-- Kuva -->
-                <div style="background-image: url(img/news/omaneuvo.jpg);" class="news-ball">
+            <!-- a piece of news-->
+            <article class="article">
+                <i class="fa fa-chevron-down nappi"></i>
+
+                <p class="showContent" id="Verohallinnon_chatin_suosio_yllatti">
+                    Verohallinnon chatin suosio yllätti
+                </p>
+
+                <div class="articleContent">
+                    <div class="hidden-for-small jaa">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=@@@@@">
+                            <i title="Jaa uutinen Facebookissa" class="fa fa-facebook-square"></i>
+                        </a>
+                        <a href="https://twitter.com/home?status=Sysart%20uutisoi:%20@@@@@">
+                            <i title="Twiittaa uutisesta" class="fa fa-twitter-square"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=@@@@@&title=Sysart%20uutisoi:%20&summary=&source=">
+                            <i title="Jaa uutinen LinkedInissä" class="fa fa-linkedin-square"></i>
+                        </a>
+                    </div>
+                    <!--Image-->
+                    <div style="background-image: url(img/news/verohallinto.png);" class="news-ball imgInText"></div>
+                    <!--Published-->
+                    <span class="published">16.6.2015</span><br>
+                    <!--Article text-->
+                    <p>Verohallinto valitsi Sysartin monikanavaisen verkkoasiakaspalvelun toimittajaksi.
+                        Verkkoasiakaspalvelun
+                        osa-alueista chat-palvelu tarjoaa asiakkaille nopean ja interaktiivisen tavan hakea apua
+                        verotusta
+                        koskeviin ongelmiinsa.</p>
+
+                    <p>Veroilmoitus verkossa -palvelussa chat oli ylivoimainen asiakaspalvelukanava. Chat-palvelu on
+                        ollut
+                        käytössä huhtikuun alusta saakka ja jo yli 10 000 asiakasta on saanut apua veroasioissa. Lähes
+                        90 %
+                        yhteydenotoista tuli chatin kautta. Toiseksi tuli puhelin 10 %:n osuudella, kun taas kirjallisia
+                        tukipyyntöjä tehtiin vain kourallinen.</p>
+
+                    <p>Lisää aiheesta Verohallinnon tiedotteesta:<br>
+                        <a target="_blank"
+                           href="http://vero.fi/fi-FI/Tietoa_Verohallinnosta/Tiedotteet/Uutisia/Chatin_suosio_yllatti%2837710%29">http://vero.fi/fi-FI/Tietoa_Verohallinnosta/Tiedotteet/Uutisia/Chatin_suosio_yllatti%2837710%29</a>
+                    </p>
+
+                    <p>Sekä yksityiskohtaisempia tuloksia:<br>
+                        <a target="_blank"
+                           href="http://www.slideshare.net/Verohallinto/verohallinto-chatpilotin-kokemukset">http://www.slideshare.net/Verohallinto/verohallinto-chatpilotin-kokemukset</a>
+                    </p>
+
+                    <p>Verohallinto on valinnut Sysartin monikanavaisen verkkoasiakaspalvelun toimittajaksi. Uuden
+                        palvelun
+                        avulla verottaja pystyy yhdistämään aiemmat erillisratkaisut yhdeksi kokonaisuudeksi, mikä
+                        tehostaa
+                        asiakaspalvelua sekä tarjoaa asiakkaille yhden selkeän ja helposti lähestyttävän
+                        asiakaspalvelupisteen.
+                        Verkkoasiakaspalvelu tulee koostumaan kolmesta osasta: vastauspankki, Oma kysymys -palvelu sekä
+                        chat-palvelu.</p>
                 </div>
-            </div>
-            <div class="small-9 columns news-head">
-                <!-- Otsikko -->
-                <h3>OmaNeuvola -verkkopalvelu käyttöön Espoossa
-                    <span class="date"><br>14.11.2014</span></h3>
-            </div>
+            </article>
 
-            <div class="news-content hide-news small-12 medium-9 medium-offset-3 columns">
-                <!-- Sisältö -->
-                <p> Espoossa on otettu käyttöön OmaNeuvola -verkkopalvelu. Palvelusta löytyy tärkeitä tietoja
-                    neuvolakäynteihin, raskauteen ja vanhemmuuteen liittyen. Palvelussa voi myös tarkistaa
-                    äitiysneuvolan ensikäynnin ajankohdan ja valmistautua käynnille esitietolomakkeen avulla.
+            <!-- a piece of news-->
+            <article class="article">
+                <i class="fa fa-chevron-down nappi"></i>
+
+                <p class="showContent" id="Espoon_hyvinvointipalveluiden_sahkoistys_etenee">
+                    Espoon hyvinvointipalveluiden sähköistys etenee
                 </p>
 
-                <p> Espoossa on otettu käyttöön OmaNeuvola -verkkopalvelu. Palvelusta löytyy tärkeitä tietoja
-                    neuvolakäynteihin, raskauteen ja vanhemmuuteen liittyen. Palvelussa voi myös tarkistaa
-                    äitiysneuvolan ensikäynnin ajankohdan ja valmistautua käynnille esitietolomakkeen avulla.
-                </p>
+                <div class="articleContent">
+                    <div class="hidden-for-small jaa">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=@@@@@">
+                            <i title="Jaa uutinen Facebookissa" class="fa fa-facebook-square"></i>
+                        </a>
+                        <a href="https://twitter.com/home?status=Sysart%20uutisoi:%20@@@@@">
+                            <i title="Twiittaa uutisesta" class="fa fa-twitter-square"></i>
+                        </a>
 
-                <p> OmaNeuvola -verkkopalvelu on toteutettu Sysart Oy:n Requeste -ratkaisulla. Requeste on ohjelmisto
-                    palveluprosessien toiminnanohjaukseen ja palvelujen tarjoamiseen vuorovaikutteisena verkkopalveluna.
-                    Se soveltuu muun muassa erilaisten lupa-, anomus-, kysely-, neuvonta- ja palauteprosessien
-                    sähköistämiseen.
-                </p>
-            </div>
-        </div>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=@@@@@&title=Sysart%20uutisoi:%20&summary=&source=">
+                            <i title="Jaa uutinen LinkedInissä" class="fa fa-linkedin-square"></i>
+                        </a>
+                    </div>
+
+                    <!--Image-->
+                    <div style="background-image: url(img/customers/s_espoo.png);" class="news-ball imgInText"></div>
+                    <!--Published-->
+                    <span class="published">16.12.2014</span><br>
+                    <!--Article text-->
 
 
-        <!-- Yksi uutinen-->
-        <div class="small-12 large-10 large-offset-1 columns piece-of-news preview">
-            <i class="readmore fa fa-chevron-down"></i>
+                    <p>
+                        Espoon sosiaali- ja terveystoimen sähköisten palvelujen kehitys etenee vauhdilla. Nyt vuorossa
+                        on
+                        talous- ja velkaneuvonta, jossa on otettu käyttöön OmaTalous -verkkopalvelu.
+                    </p>
 
-            <div class="small-3 columns news-head">
-                <!-- Kuva -->
-                <div style="background-image: url(img/customers/s_espoo.png);" class="news-ball">
+                    <p>
+                        Palvelussa voi esittää kysymyksiä talous- ja velkaneuvojalle sekä löytää vastauksia usein
+                        kysyttyihin kysymyksiin. Lisäksi asiakas voi valmistautua henkilökohtaiseen tapaamiseen
+                        lähettämällä
+                        etukäteen sähköisellä lomakkeella omaa taloutta koskevia tietoja. Näin itse tapaamisella jää
+                        enemmän
+                        aikaa ratkaisujen etsimiseen.
+                    </p>
+
+                    <p>
+                        Aiemmin lokakuussa julkaistu OmaNeuvola -palvelu on saanut erittäin hyvän vastaanoton. Sekä
+                        asiakkaat että ammattilaiset ovat kehuneet palvelun selkeää käyttöliittymää ja
+                        helppokäyttöisyyttä.
+                        Tyytyväisyys on näkynyt myös käyttöaktiivisuudessa, sillä 86% neuvolan uusista asiakkaista on
+                        siirtynyt sähköisen palvelun käyttäjiksi.
+                    </p>
+
                 </div>
-            </div>
-            <div class="small-9 columns news-head">
-                <!-- Otsikko -->
-                <h3>Sysart sähköistää Espoon hyvinvointipalvelut
-                    <span class="date"><br>06.02.2014</span></h3>
-            </div>
+            </article>
 
-            <div class="news-content hide-news small-12 medium-9 medium-offset-3 columns">
-                <!-- Sisältö -->
-                <p> Sysart on valittu Espoon hyvinvointipalveluiden verkkoneuvontajärjestelmän toimittajaksi.
-                    Projektissa toteutetaan Espoon sosiaali- ja terveystoimen sähköinen asiointikanava, joka
-                    mahdollistaa kuntalaisille ajasta ja paikasta riippumattoman asioinnin sosiaali- ja terveydenhuollon
-                    ammattilaisten kanssa.
+
+            <!-- a piece of news-->
+            <article class="article">
+                <i class="fa fa-chevron-down nappi"></i>
+
+                <p class="showContent" id="Espoon_hyvinvointipalveluiden_sahkoistys_etenee">
+                    Sysart uudistaa Verohallinnon asiakaspalvelua
                 </p>
 
-                <p> Verkkoneuvontajärjestelmän kautta Espoon sosiaali- ja terveystoimen asiakkaat voivat lähettää
-                    kysymyksiä ja saada vastauksia sekä lähettää tietoa ammattilaisille. Vastaavasti ammattilaiset
-                    voivat lähettää asiakkaille tiedotteita, ohjeita ja dokumentteja. Järjestelmä tukee myös erilaisten
-                    testien ja itsearviointivälineiden luomista ja käyttöä asiakastyössä. Asiakastyön lisäksi
-                    verkkoneuvontajärjestelmä mahdollistaa ammattilaisten keskinäisen konsultaation oman organisaation
-                    sisällä ja jatkossa myös kaupungin ulkopuolisten toimijoiden kanssa.
+                <div class="articleContent">
+                    <div class="hidden-for-small jaa">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=@@@@@">
+                            <i title="Jaa uutinen Facebookissa" class="fa fa-facebook-square"></i>
+                        </a>
+                        <a href="https://twitter.com/home?status=Sysart%20uutisoi:%20@@@@@">
+                            <i title="Twiittaa uutisesta" class="fa fa-twitter-square"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=@@@@@&title=Sysart%20uutisoi:%20&summary=&source=">
+                            <i title="Jaa uutinen LinkedInissä" class="fa fa-linkedin-square"></i>
+                        </a>
+                    </div>
+
+                    <!--Image-->
+                    <div style="background-image: url(img/customers/s_vero.png);" class="news-ball imgInText"></div>
+                    <!--Published-->
+                    <span class="published">12.12.2014</span><br>
+                    <!--Article text-->
+
+                    <p> Verohallinto on valinnut Sysartin monikanavaisen verkkoasiakaspalvelun toimittajaksi. Uuden
+                        palvelun
+                        avulla verottaja pystyy yhdistämään aiemmat erillisratkaisut yhdeksi kokonaisuudeksi, mikä
+                        tehostaa
+                        asiakaspalvelua sekä tarjoaa asiakkaille yhden selkeän ja helposti lähestyttävän
+                        asiakaspalvelupisteen.
+                    </p>
+
+                    <p> Verkkoasiakaspalvelu tulee koostumaan kolmesta osasta. Vastauspankkiin kerätään laaja kokoelma
+                        vastauksia asiakkaiden yleisimpiin kysymyksiin, mikä mahdollistaa useimmissa tapauksissa avun
+                        saamisen ilman yhteydenottoa asiakaspalveluun. Vastauspankissa oleva suuri tietomäärä tuodaan
+                        helpommin asiakkaiden käyttöön edistyksekkäällä oppivalla hakumoottorilla. Mikäli asiakas ei
+                        löydä
+                        valmista ratkaisua ongelmaansa vastauspankista, hän voi lähettää kysymyksiä asiakaspalveluun Oma
+                        kysymys -palvelun kautta. Tätä kautta tulevat yhteydenotot reititetään automaattisesti sopivien
+                        asiantuntijoiden työjonoihin ja sisäiseen tehtävän hallintaan. Kolmantena osiona chat-palvelu
+                        tarjoaa asiakkaille nopean ja interaktiivisen tavan hakea apua verotusta koskeviin ongelmiinsa.
+                    </p>
+
+                    <p> Ratkaisu perustuu Sysartin Requeste sähköisen asioinnin alustaan ja se otetaan käyttöön
+                        vaiheittain
+                        vuoden 2015 aikana. Projektista tarkemmin verohallinnon omilla sivuilla.
+                    </p>
+
+                    <p>Lisätietoja antaa toimitusjohtaja Petri Mäenpää +358 40 531 3841.</p>
+
+
+                </div>
+            </article>
+
+
+            <!-- a piece of news-->
+            <article class="article">
+                <i class="fa fa-chevron-down nappi"></i>
+
+                <p class="showContent" id="Espoon_hyvinvointipalveluiden_sahkoistys_etenee">
+                    OmaNeuvola -verkkopalvelu käyttöön Espoossa
                 </p>
 
-                <p> Sysart hyödyntää verkkoneuvontajärjestelmän toteutuksessa omaa Requeste sähköisen asioinnin
-                    alustaansa. Requeste on ohjelmisto palveluprosessien toiminnanohjaukseen ja palvelujen tarjoamiseen
-                    vuorovaikutteisena verkkopalveluna. Se soveltuu muun muassa erilaisten lupa-, anomus-, kysely-,
-                    neuvonta- ja palauteprosessien sähköistämiseen. Toimitusprojekti käynnistyy tammikuussa 2014 ja se
-                    sisältää porrastetusti neljä pilottikäyttöönottoa. Pilotoitavia kohteita ovat äitiysneuvolan
-                    keskitetty ajanvaraus ja neuvonta, Suvelan alueen lapsiperheiden parissa toimivien ammattilaisten
-                    keskinäinen konsultaatio, aikuisosiaalityön neuvonta sekä talous- ja velkaneuvonnan yleisneuvonta.
-                    Viimeinen pilottikäyttöönotto on aikataulutettu alkuvuoteen 2015. Sysart tarjoaa
-                    verkkoneuvontapalvelun SaaS-ratkaisuna.
+                <div class="articleContent">
+                    <div class="hidden-for-small jaa">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=@@@@@">
+                            <i title="Jaa uutinen Facebookissa" class="fa fa-facebook-square"></i>
+                        </a>
+                        <a href="https://twitter.com/home?status=Sysart%20uutisoi:%20@@@@@">
+                            <i title="Twiittaa uutisesta" class="fa fa-twitter-square"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=@@@@@&title=Sysart%20uutisoi:%20&summary=&source=">
+                            <i title="Jaa uutinen LinkedInissä" class="fa fa-linkedin-square"></i>
+                        </a>
+                    </div>
+
+                    <!--Image-->
+                    <div style="background-image: url(img/news/omaneuvo.jpg);" class="news-ball imgInText"></div>
+                    <!--Published-->
+                    <span class="published">14.11.2014</span><br>
+                    <!--Article text-->
+                    <p> Espoossa on otettu käyttöön OmaNeuvola -verkkopalvelu. Palvelusta löytyy tärkeitä tietoja
+                        neuvolakäynteihin, raskauteen ja vanhemmuuteen liittyen. Palvelussa voi myös tarkistaa
+                        äitiysneuvolan ensikäynnin ajankohdan ja valmistautua käynnille esitietolomakkeen avulla.
+                    </p>
+
+                    <p> Espoossa on otettu käyttöön OmaNeuvola -verkkopalvelu. Palvelusta löytyy tärkeitä tietoja
+                        neuvolakäynteihin, raskauteen ja vanhemmuuteen liittyen. Palvelussa voi myös tarkistaa
+                        äitiysneuvolan ensikäynnin ajankohdan ja valmistautua käynnille esitietolomakkeen avulla.
+                    </p>
+
+                    <p> OmaNeuvola -verkkopalvelu on toteutettu Sysart Oy:n Requeste -ratkaisulla. Requeste on
+                        ohjelmisto
+                        palveluprosessien toiminnanohjaukseen ja palvelujen tarjoamiseen vuorovaikutteisena
+                        verkkopalveluna.
+                        Se soveltuu muun muassa erilaisten lupa-, anomus-, kysely-, neuvonta- ja palauteprosessien
+                        sähköistämiseen.
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- a piece of news-->
+            <article class="article">
+                <i class="fa fa-chevron-down nappi"></i>
+
+                <p class="showContent" id="Espoon_hyvinvointipalveluiden_sahkoistys_etenee">
+                    Sysart sähköistää Espoon hyvinvointipalvelut
                 </p>
 
-                <p> Hankinnasta järjestettiin julkinen tarjouskilpailu, jossa Sysartin tarjous arvioitiin
-                    kokonaistaloudellisesti edullisimmaksi. Kilpailukykyisen hinnan lisäksi Sysart sai tarjousten
-                    vertailussa parhaat pisteet referenssien asiakastyytyväisyydestä sekä ratkaisun
-                    käytettävyysarvioinnista. Toimitusjohtaja Petri Mäenpään mukaan hankintapäätös oli osoitus
-                    Requeste-tuotteen soveltuvuudesta sähköisten palvelujen rakentamiseen. ""Tähän saakka sähköisen
-                    asioinnin projektit ovat perustuneet räätälöintiin ja asiakaskohtaiseen toteutukseen, mikä on tehnyt
-                    hankkeista hintavia. Requeste tarjoaa mahdollisuuden määritellä toimintaprosessit ja verkkolomakkeet
-                    helppokäyttöisillä käyttöliittymillä ilman ohjelmointityötä, mikä nopeuttaa projekteja ja laskee
-                    kustannuksia", kertoo Mäenpää.
-                </p>
+                <div class="articleContent">
+                    <div class="hidden-for-small jaa">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=@@@@@">
+                            <i title="Jaa uutinen Facebookissa" class="fa fa-facebook-square"></i>
+                        </a>
+                        <a href="https://twitter.com/home?status=Sysart%20uutisoi:%20@@@@@">
+                            <i title="Twiittaa uutisesta" class="fa fa-twitter-square"></i>
+                        </a>
 
-                <p> Mäenpää näkee toimituksessa myös tulevaisuuden symboliikkaa. "Suomen julkisella sektorilla on edessä
-                    suuria haasteita väestön ikääntyessä, työvoiman supistuessa ja rahoituksen vähentyessä. Sähköisen
-                    asioinnin ja itsepalvelun lisääminen on merkittävässä roolissa ratkaisuja etsittäessä. Sähköiset
-                    palvelut säästävät kustannuksia, parantavat palvelun laatua ja vapauttavat asiantuntijoiden
-                    resursseja rutiinitöistä vaativiin asiakaskohtaamisiin. Varsinkin sosiaali- ja terveystoimessa on
-                    suuri tarve Espoon verkkoneuvontapalvelun kaltaisille ratkaisuille. Koska ratkaisumme on
-                    tuotepohjainen, pystymme helposti monistamaan konseptin ja tarjoamaan sitä edullisesti myös muille
-                    kaupungeille", toteaa Mäenpää.
-                </p></div>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=@@@@@&title=Sysart%20uutisoi:%20&summary=&source=">
+                            <i title="Jaa uutinen LinkedInissä" class="fa fa-linkedin-square"></i>
+                        </a>
+                    </div>
+
+                    <!--Image-->
+                    <div style="background-image: url(img/customers/s_espoo.png);" class="news-ball imgInText"></div>
+                    <!--Published-->
+                    <span class="published">06.02.2014</span><br>
+                    <!--Article text-->
+                    <p> Sysart on valittu Espoon hyvinvointipalveluiden verkkoneuvontajärjestelmän toimittajaksi.
+                        Projektissa toteutetaan Espoon sosiaali- ja terveystoimen sähköinen asiointikanava, joka
+                        mahdollistaa kuntalaisille ajasta ja paikasta riippumattoman asioinnin sosiaali- ja
+                        terveydenhuollon
+                        ammattilaisten kanssa.
+                    </p>
+
+                    <p> Verkkoneuvontajärjestelmän kautta Espoon sosiaali- ja terveystoimen asiakkaat voivat lähettää
+                        kysymyksiä ja saada vastauksia sekä lähettää tietoa ammattilaisille. Vastaavasti ammattilaiset
+                        voivat lähettää asiakkaille tiedotteita, ohjeita ja dokumentteja. Järjestelmä tukee myös
+                        erilaisten
+                        testien ja itsearviointivälineiden luomista ja käyttöä asiakastyössä. Asiakastyön lisäksi
+                        verkkoneuvontajärjestelmä mahdollistaa ammattilaisten keskinäisen konsultaation oman
+                        organisaation
+                        sisällä ja jatkossa myös kaupungin ulkopuolisten toimijoiden kanssa.
+                    </p>
+
+                    <p> Sysart hyödyntää verkkoneuvontajärjestelmän toteutuksessa omaa Requeste sähköisen asioinnin
+                        alustaansa. Requeste on ohjelmisto palveluprosessien toiminnanohjaukseen ja palvelujen
+                        tarjoamiseen
+                        vuorovaikutteisena verkkopalveluna. Se soveltuu muun muassa erilaisten lupa-, anomus-, kysely-,
+                        neuvonta- ja palauteprosessien sähköistämiseen. Toimitusprojekti käynnistyy tammikuussa 2014 ja
+                        se
+                        sisältää porrastetusti neljä pilottikäyttöönottoa. Pilotoitavia kohteita ovat äitiysneuvolan
+                        keskitetty ajanvaraus ja neuvonta, Suvelan alueen lapsiperheiden parissa toimivien
+                        ammattilaisten
+                        keskinäinen konsultaatio, aikuisosiaalityön neuvonta sekä talous- ja velkaneuvonnan
+                        yleisneuvonta.
+                        Viimeinen pilottikäyttöönotto on aikataulutettu alkuvuoteen 2015. Sysart tarjoaa
+                        verkkoneuvontapalvelun SaaS-ratkaisuna.
+                    </p>
+
+                    <p> Hankinnasta järjestettiin julkinen tarjouskilpailu, jossa Sysartin tarjous arvioitiin
+                        kokonaistaloudellisesti edullisimmaksi. Kilpailukykyisen hinnan lisäksi Sysart sai tarjousten
+                        vertailussa parhaat pisteet referenssien asiakastyytyväisyydestä sekä ratkaisun
+                        käytettävyysarvioinnista. Toimitusjohtaja Petri Mäenpään mukaan hankintapäätös oli osoitus
+                        Requeste-tuotteen soveltuvuudesta sähköisten palvelujen rakentamiseen. ""Tähän saakka sähköisen
+                        asioinnin projektit ovat perustuneet räätälöintiin ja asiakaskohtaiseen toteutukseen, mikä on
+                        tehnyt
+                        hankkeista hintavia. Requeste tarjoaa mahdollisuuden määritellä toimintaprosessit ja
+                        verkkolomakkeet
+                        helppokäyttöisillä käyttöliittymillä ilman ohjelmointityötä, mikä nopeuttaa projekteja ja laskee
+                        kustannuksia", kertoo Mäenpää.
+                    </p>
+
+                    <p> Mäenpää näkee toimituksessa myös tulevaisuuden symboliikkaa. "Suomen julkisella sektorilla on
+                        edessä
+                        suuria haasteita väestön ikääntyessä, työvoiman supistuessa ja rahoituksen vähentyessä.
+                        Sähköisen
+                        asioinnin ja itsepalvelun lisääminen on merkittävässä roolissa ratkaisuja etsittäessä. Sähköiset
+                        palvelut säästävät kustannuksia, parantavat palvelun laatua ja vapauttavat asiantuntijoiden
+                        resursseja rutiinitöistä vaativiin asiakaskohtaamisiin. Varsinkin sosiaali- ja terveystoimessa
+                        on
+                        suuri tarve Espoon verkkoneuvontapalvelun kaltaisille ratkaisuille. Koska ratkaisumme on
+                        tuotepohjainen, pystymme helposti monistamaan konseptin ja tarjoamaan sitä edullisesti myös
+                        muille
+                        kaupungeille", toteaa Mäenpää.
+                    </p>
+                </div>
+            </article>
         </div>
+    </div>
 
 
     </div>

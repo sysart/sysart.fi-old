@@ -1,7 +1,7 @@
 /* Add Hash */
 
-$('.uraMahdollisuus').each(function(){
-    var content = $(this).children('.tyopaikka').text().toLowerCase().replace(/ |#|\//g, '-');
+$("article").each(function(){
+    var content = $(this).children('.showContent').text().toLowerCase().replace(/ |#|\//g, '-');
     $(this).attr('id', content);
 });
 
@@ -14,7 +14,7 @@ var gotoHash = function(){
         $(document.body).animate({
             'scrollTop':   $(window.location.hash).offset().top - 40
         }, 2000);
-        $(window.location.hash).children('.tyopaikka').trigger('click');
+        $(window.location.hash).children('.showContent').trigger('click');
     }
 }
 
@@ -24,26 +24,19 @@ var gotoHash = function(){
 
 
 /*  Scoroll to middle */
-
 var portHeight = $(window).height();
-var ghostHeight = $(".ghost-start").height();
 var headerPosition = $("#headerstatic").position();
-var headerHeight = $("#headerstatic").height();
 var startPadding = portHeight / 2 - 130;
 var startPosition = headerPosition.top - startPadding;
 
 
-
-
-
 // Suffle people
-
 reorder();
 function reorder() {
     var grp = $("#sysartilaiset").children();
     var cnt = grp.length;
-
     var temp, x;
+
     for (var i = 0; i < cnt; i++) {
         temp = grp[i];
         x = Math.floor(Math.random() * cnt);
@@ -56,14 +49,12 @@ function reorder() {
 
 
 $(window).scroll(function () {
-
     var portHeight = $(window).height();
     var location = $(window).scrollTop();
     var headerPosition = $("#headerstatic").position();
     var newsPosition = $("#ajankohtaista").position();
     var bottomTrigger = newsPosition.top - portHeight;
     var topTrigger = headerPosition.top - portHeight;
-
 
     /* Top-bar */
     if (location < topTrigger + 90) {
@@ -157,14 +148,14 @@ $(document).ready(function () {
 
 });
 
-$(".uraMahdollisuus").children('.tyopaikka').on('click', function () {
+$("article").children('.showContent').on('click', function () {
 
-    var info = $(this).siblings('.uraInfo');
+    var info = $(this).siblings('.articleContent');
     var nappi = $(this).siblings('.nappi');
 
     if(info.is(':visible')){
         info.slideUp();
-        window.location.hash = "";
+        window.location.hash = "#ytimessa";
     }else{
         info.slideDown();
         window.location.hash = "#" + $(this).parent().attr('id');
@@ -188,6 +179,27 @@ $(".face-ball").on('click', function () {
     $(this).next(".name").slideToggle();
     $(this).children("img").toggleClass("ddwi");
 
+});
+
+
+$("#logoSmall").click(function () {
+    $("body,html").scrollTop(startPosition);
+});
+
+$(".hamburger").click(function () {
+    $("#mobileNav").addClass("show");
+});
+
+$(".mobileHamburger").click(function () {
+    $("#mobileNav").addClass("show");
+});
+
+$("#mobileNav nav a").click(function () {
+    $("#mobileNav").removeClass("show");
+});
+
+$("#mobileNav").click(function () {
+    $("#mobileNav").removeClass("show");
 });
 
 
