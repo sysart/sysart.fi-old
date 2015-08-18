@@ -675,6 +675,12 @@ ul li:before {
     font-size: 1rem;
     line-height: 2rem;
   }
+  .news-ball {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #76787b;
+    transition: 1s;
+  }
   .news-head {
     height: 100px;
   }
