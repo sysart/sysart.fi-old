@@ -175,6 +175,7 @@ a:focus {
   font-size: 40px;
   line-height: 40px;
 }
+
 .mobileHamburger {
   position: absolute;
   height: 40px;
@@ -263,14 +264,13 @@ a:focus {
   transition: 1s;
   text-align: center;
 
-
   #logoSmall {
     width: 100%;
     text-align: center;
   }
 
   img {
-    height: 50px;
+    height: 80px;
     padding-top: 20px;
   }
 }
@@ -596,7 +596,30 @@ h2 {
       float: right;
     }
   }
+
 }
+
+ul {
+  padding-left: 20px;
+  li {
+    list-style-type: none;
+    text-align: left;
+    color: white;
+
+    &:before {
+      content: "";
+      line-height: 1em;
+      font-size: 20px;
+      width: .5em;
+      height: .5em;
+      background-color: @tangerine;
+      float: left;
+      margin: 5px 5px 5px 0px;
+      border-radius: 50%;
+    }
+  }
+}
+
 
 .readmore:hover {
   color: @tangerine;
@@ -816,12 +839,6 @@ h2 {
     text-align: left;
   }
 
-  .news-ball {
-    width: 75px;
-    height: 75px;
-    border: 1px solid @ash;
-    transition: 1s;
-  }
 
   #header {
     height: 100px;

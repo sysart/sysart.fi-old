@@ -226,7 +226,7 @@ a:focus {
   text-align: center;
 }
 #header-small img {
-  height: 50px;
+  height: 80px;
   padding-top: 20px;
 }
 .preview {
@@ -517,6 +517,25 @@ h2 {
   margin-top: 15px;
   float: right;
 }
+ul {
+  padding-left: 20px;
+}
+ul li {
+  list-style-type: none;
+  text-align: left;
+  color: white;
+}
+ul li:before {
+  content: "";
+  line-height: 1em;
+  font-size: 20px;
+  width: .5em;
+  height: .5em;
+  background-color: #f79952;
+  float: left;
+  margin: 5px 5px 5px 0px;
+  border-radius: 50%;
+}
 .readmore:hover {
   color: #f79952;
 }
@@ -687,12 +706,6 @@ h2 {
   }
   p {
     text-align: left;
-  }
-  .news-ball {
-    width: 75px;
-    height: 75px;
-    border: 1px solid #76787b;
-    transition: 1s;
   }
   #header {
     height: 100px;
