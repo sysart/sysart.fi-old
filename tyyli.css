@@ -77,13 +77,14 @@ a:focus {
   text-align: center;
 }
 .leftyIcon i {
-  color: white;
+  color: #76787b;
   font-size: 60px !important;
   height: 100px;
   line-height: 100px;
   width: 100px;
   border-radius: 100px;
-  background-color: #76787b;
+  background-color: white;
+  box-shadow: 0 0 1px #76787B inset;
 }
 .imgInText {
   float: left;
@@ -376,6 +377,7 @@ h2 {
   transition: 1s;
   background-size: cover;
   background-position: 50%;
+  box-shadow: 0 0 1px #76787B inset;
 }
 .news-content {
   display: none;
@@ -387,20 +389,18 @@ h2 {
 }
 #twitter .twitterFlow {
   position: relative;
-  background: #76787b;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   padding: 10px 20px 10px 20px;
   cursor: pointer;
   min-height: 60px;
-  border-radius: 30px;
   text-align: center;
   background: white;
-  box-shadow: 0 0 0 5px #76787B inset;
+  box-shadow: 1px 1px #76787B;
   padding-bottom: 0;
 }
 #twitter .twitterFlow .published {
   font-family: Campton-B;
-  color: #f7f7ed;
+  color: #76787b;
   float: left;
   margin-left: -20px;
 }
@@ -408,11 +408,11 @@ h2 {
   padding-right: 50px;
   margin: 0;
   font-size: 1.5rem;
-  color: #f79952;
+  color: #595959;
   font-family: Campton-B;
 }
 #twitter .twitterFlow p {
-  color: white;
+  color: #76787b;
   padding: 0;
 }
 #twitter .twitterFlow i {
@@ -459,10 +459,13 @@ h2 {
   top: 10px;
   right: 20px;
   font-size: 35px !important;
-  color: white;
+  color: #f79952;
   height: 35px;
   width: 35px;
   transition: 0.5s;
+}
+.nappi:hover {
+  color: #f36421;
 }
 .ympari {
   -ms-transform: rotate(180deg) !important;
@@ -474,16 +477,16 @@ h2 {
 }
 .article {
   position: relative;
-  background: #76787b;
-  margin-bottom: 5px;
+  background: white;
+  margin-bottom: 7px;
   padding: 10px 20px 10px 20px;
   cursor: pointer;
   min-height: 60px;
-  border-radius: 30px;
+  box-shadow: 1px 1px #76787B;
 }
 .article .published {
   font-family: Campton-B;
-  color: #f7f7ed;
+  color: #76787b;
   float: left;
   margin-left: -20px;
 }
@@ -491,11 +494,11 @@ h2 {
   padding-right: 50px;
   margin: 0;
   font-size: 1.5rem;
-  color: #f79952;
+  color: #595959;
   font-family: Campton-B;
 }
 .article p {
-  color: white;
+  color: #76787b;
   padding: 0;
 }
 .articleContent {
@@ -523,7 +526,7 @@ ul {
 ul li {
   list-style-type: none;
   text-align: left;
-  color: white;
+  color: #76787b;
 }
 ul li:before {
   content: "";
@@ -678,7 +681,7 @@ ul li:before {
   .news-ball {
     width: 100px;
     height: 100px;
-    border: 1px solid #76787b;
+    box-shadow: 0 0 1px #76787B inset;
     transition: 1s;
   }
   .news-head {
