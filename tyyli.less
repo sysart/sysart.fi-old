@@ -26,6 +26,11 @@
 ---------------------------------*/
 
 html, body {
+  background-image: url("img/myynti_tausta.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   background-color: @light;
   text-align: center;
 }
@@ -53,6 +58,11 @@ p {
 
 a {
   color: @tangerine;
+  word-break: break-all;
+}
+
+a:link {
+  color: @tangerine;
 }
 
 a:visited {
@@ -60,6 +70,14 @@ a:visited {
 }
 
 a:hover {
+  color: @orange;
+}
+
+a:active {
+  color: @orange;
+}
+
+a:focus {
   color: @orange;
 }
 
@@ -73,15 +91,40 @@ a:hover {
   padding: 10px;
 }
 
+.lefty {
+  position: relative;
+  height: 100px;
+  text-align: center;
 
-.uusi{
-  font-size: 85px !important;
-  color:white;
-  position:relative;
 }
 
+.leftyIcon {
+  i {
+    color: @ash;
+    font-size: 60px !important;
+    height: 100px;
+    line-height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 0 0 1px #76787B inset;
+  }
+}
 
-#sysartilaiset{
+.imgInText {
+  float: left;
+  shape-outside: circle();
+  margin-right: 20px;
+}
+
+.oranssi {
+  color: @tangerine !important;
+  font-family: Campton-B;
+  margin-bottom: 2px !important;
+  line-height: 1rem;
+}
+
+#sysartilaiset {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,42 +159,121 @@ a:hover {
   margin-bottom: 30px !important;
 }
 
-#topnav {
-  background-color: @ash;
-  text-align: left;
+.sectionHead {
+  padding-bottom: 0px !important;
+}
+
+.sectionBody {
+  padding-top: 0px !important;
+}
+
+.hamburger {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  color: @tangerine;
+  right: 15px;
+  top: 30px;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.mobileHamburger {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  color: @tangerine;
+  right: 5000px;
+  top: 30px;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+#mobileNav {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 5000px;
+  top: 0;
+  background: @ash-light;
+  z-index: 99;
+  transition: 0.5s;
+
+  &.show {
+    left: 0 !important;
+    transition: 0.5s;
+  }
+
+  nav {
+
+    float: right;
+    font-size: 30px;
+    margin-top: 10%;
+
+    a {
+      width: 100%;
+      text-align: left;
+      background: white;
+      float: right;
+      clear: right;
+      margin-bottom: 5px;
+      padding: 8px;
+      border-radius: 5px;
+    }
+  }
+}
+
+#topnav, #bottomnav {
+  height: 30px;
+  background-color: white;
+  text-align: center;
   z-index: 10;
   transition: opacity 1s;
   position: relative;
+
+  a {
+    color: @tangerine;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+    line-height: 30px;
+    transition: .5s;
+  }
+
+  a:hover {
+    color: @ash;
+    background: @tangerine;
+  }
+
 }
 
-.nav {
-  height: 30px;
+#topnav {
+  -webkit-box-shadow: 0px -5px 0px 0px @tangerine;
+  -moz-box-shadow: 0px -5px 0px 0px @tangerine;
+  box-shadow: 0px -5px 0px 0px @tangerine;
 }
 
-.nav a {
-  color: white;
-  font-size: 20px;
-  margin: 20px;
-  padding: 10px;
-  line-height: 30px;
-
+#bottomnav {
+  -webkit-box-shadow: 0px 5px 0px 0px @tangerine;
+  -moz-box-shadow: 0px 5px 0px 0px @tangerine;
+  box-shadow: 0px 5px 0px 0px @tangerine;
 }
 
 /*Keskipalkki*/
 #header-small {
-  height: 30px;
+  height: 80px;
   background-color: white;
-  transition: 2s;
+  transition: 1s;
   text-align: center;
 
-  #logo-small{
-    width:100%;
+  #logoSmall {
+    width: 100%;
     text-align: center;
   }
 
-
   img {
-    height: 30px;
+    height: 80px;
+    padding-top: 20px;
   }
 }
 
@@ -165,26 +287,14 @@ a:hover {
   transition: .5s;
 
   #logo {
-    padding-top: 50px;
+    padding-top: 35px;
     display: none;
   }
 
 }
 
-#bottomnav {
-  background-color: @ash;
-  text-align: right;
-  z-index: 10;
-  transition: opacity 1s;
-}
-
 .nav-start {
   opacity: 0;
-}
-
-#basement {
-  text-align: left;
-
 }
 
 .ankkuri {
@@ -201,15 +311,16 @@ a:hover {
   width: 100%;
   left: 0;
   left: 0;
+  z-index: 999;
 }
 
-.fixed-bar-1 {
-  top: 0;
-}
+//.fixed-bar-1 {
+//  top: 0;
+//}
 
 .fixed-bar-2 {
-  top: 30px;
-  height: 30px !important;
+  top: 0px;
+  height: 100px !important;
   transition: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -217,19 +328,23 @@ a:hover {
   display: flex;
   justify-content: center;
   z-index: 99;
+
+  -webkit-box-shadow: 0px 5px 0px 0px @tangerine;
+  -moz-box-shadow: 0px 5px 0px 0px @tangerine;
+  box-shadow: 0px 5px 0px 0px @tangerine;
 }
 
-.fixed-bar-3 {
-  top: 60px;
-}
+//.fixed-bar-3 {
+//  top: 60px;
+//}
 
 .fixed-bar-4 {
   bottom: 60px;
 }
 
 .fixed-bar-5 {
-  bottom: 30px;
-  height: 30px !important;
+  bottom: 0px;
+  height: 100px !important;
   transition: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -237,11 +352,15 @@ a:hover {
   display: flex;
   justify-content: center;
   z-index: 99;
+
+  -webkit-box-shadow: 0px -5px 0px 0px @tangerine;
+  -moz-box-shadow: 0px -5px 0px 0px @tangerine;
+  box-shadow: 0px -5px 0px 0px @tangerine;
 }
 
-.fixed-bar-6 {
-  bottom: 0px;
-}
+//.fixed-bar-6 {
+//  bottom: 0px;
+//}
 
 .top-stay {
   position: fixed;
@@ -263,6 +382,12 @@ a:hover {
   overflow: hidden;
 }
 
+.slogan {
+  font-size: 18px;
+  color: #76787B;
+  text-align: center;
+}
+
 .ghost-start {
   height: 100px !important;
 }
@@ -279,478 +404,539 @@ a:hover {
   opacity: 0;
 }
 
-  .author {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    border-radius: 50%;
+.author {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.ball {
+  margin: auto;
+  background-color: @tangerine;
+  border: 1px solid @ash;
+  width: 250px !important;
+  height: 250px !important;
+  transition: all 0.3s ease, background-position 1ms;
+  border-radius: 50%;
+
+  h2 {
+    color: @light;
+    line-height: 150px;
   }
 
-  .ball {
-    margin: auto;
-    background-color: @tangerine;
-    border: 1px solid @ash;
-    width: 250px !important;
-    height: 250px !important;
-    transition: all 0.3s ease, background-position 1ms;
-    border-radius: 50%;
+  i {
+    font-size: 150px;
+    line-height: 250px;
+    color: white;
+  }
 
-    h2 {
-      color: @light;
-      line-height: 150px;
-    }
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.piece-of-news {
+  transition: 1s;
+  float: left !important;
+}
+
+.piece-of-news:hover .readmore > {
+  opacity: 1;
+  transition: 1s;
+}
+
+.hide-news {
+  height: 0px;
+}
+
+.news-ball {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: 1s;
+  background-size: cover;
+  background-position: 50%;
+  box-shadow: 0 0 1px #76787B inset;
+}
+
+.news-content {
+  display: none;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.news-head h3 {
+  text-align: left;
+}
+
+#twitter {
+  .twitterFlow {
+    .article;
+    text-align: center;
+    background: white;
+    box-shadow: 1px 1px #76787B;
+    padding-bottom: 0;
 
     i {
-      font-size: 150px;
-      line-height: 250px;
-      color: white;
+      color: @tangerine;
     }
 
+    p {
+      font-size: 20px;
+      word-break: break-word;
+    }
   }
 
-   h2 {
-    font-size: 2rem;
-    text-align: center;
+}
+
+.spin {
+  -webkit-transform: rotate(180deg) !important;
+  -ms-transform: rotate(180deg) !important;
+  transform: rotate(180deg) !important;
+
+}
+
+.news-head {
+  height: 150px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.readmore {
+  color: white;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  height: 50px;
+  font-size: 50px !important;
+  transition: 1s;
+  z-index: 9;
+}
+
+.lead p {
+  font-weight: bold;
+}
+
+.nappi {
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 35px !important;
+  color: @tangerine;
+  height: 35px;
+  width: 35px;
+  transition: 0.5s;
+
+  &:hover {
+    color: @orange;
   }
 
-  .piece-of-news {
-    transition: 1s;
-    float: left !important;
+}
+
+.ympari {
+  -ms-transform: rotate(180deg) !important; /* IE 9 */
+  -webkit-transform: rotate(180deg) !important; /* Safari */
+  transform: rotate(180deg) !important;
+  transition: 0.5s;
+}
+
+.article {
+  position: relative;
+  background: white;
+  margin-bottom: 7px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  min-height: 60px;
+  box-shadow: 1px 1px #76787B;
+
+  .published {
+    font-family: Campton-B;
+    color: @ash;
+    float: left;
+    margin-left: -20px;
   }
 
-  .piece-of-news:hover .readmore > {
-    opacity: 1;
-    transition: 1s;
+  .showContent {
+    padding-right: 50px;
+    margin: 0;
+    font-size: 1.5rem;
+    color: @ash-dark;
+    font-family: Campton-B;
   }
 
-  .hide-news {
-    height: 0px;
+  p {
+    color: @ash;
+    padding: 0;
   }
 
-  .news-ball {
-    border: 5px solid grey;
-    float: left !important;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: 1s;
-    background-size: cover;
-    background-position: 50%;
-  }
+}
 
-  .news-content {
-    display: none;
-    height: auto;
-    padding-bottom: 50px;
-  }
-
-
-  .news-head h3 {
+.articleContent {
+  position: relative;
+  padding-top: 10px;
+  display: none;
+  cursor: default;
+  p {
     text-align: left;
   }
 
-  #twitter {
-
-    .bird {
-      font-size: 100px;
-      color: @ash;
-      padding: 30px;
-    }
-
-
-    .tweet {
-      padding: 30px;
-      border-radius: 10px;
-      z-index: 2;
-
-      p {
-        font-size: 20px;
-        word-break: break-word;
-      }
-    }
-
-  }
-
-  .spin {
-    -webkit-transform: rotate(180deg) !important;
-    -ms-transform: rotate(180deg) !important;
-    transform: rotate(180deg) !important;
-
-  }
-
-  .news-head {
-    height: 150px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-  }
-
-  .readmore {
-    color: white;
-    opacity: 0;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    height: 50px;
-    font-size: 50px !important;
-    transition: 1s;
-    transition: 1s;
-    z-index: 9;
-  }
-
-  #ura{
-    margin-bottom:100px;
-  }
-
-  .uraMahdollisuus {
-    background: @ash;
-    margin: 5px;
-    padding: 10px 20px 10px 20px;
-    cursor:pointer;
-
-    .tyopaikka {
-      margin: 0;
-    }
-
-    p {
-      color: white;
-      padding: 0;
-    }
-
-  }
-
-  .uraInfo {
-    padding-top: 10px;
-    display: none;
-    p {
-      text-align: left;
+  .jaa {
+    float: right;
+    height: 100%;
+    width: 40px;
+    i {
+      font-size: 40px;
+      margin-top: 15px;
+      float: right;
     }
   }
 
-  .readmore:hover {
-    color: @tangerine;
-  }
+}
 
-  .dwtitle {
-    font-family: 'Campton-L', Fallback, sans-serif;;
-    font-size: 1rem;
-  }
+ul {
+  padding-left: 20px;
+  li {
+    list-style-type: none;
+    text-align: left;
+    color: @ash;
 
-  .dwSelect {
-    color:white;
-    font-family: 'Campton-B', Fallback, sans-serif;;
-    font-size: 1.5rem;
-    background: @tangerine;
-    padding: 5px;
-    margin: 5px;
-    border-bottom: 2px solid @orange;
-    cursor:pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -ms-user-select: none;
+    &:before {
+      content: "";
+      line-height: 1em;
+      font-size: 20px;
+      width: .5em;
+      height: .5em;
+      background-color: @tangerine;
+      float: left;
+      margin: 5px 5px 5px 0px;
+      border-radius: 50%;
+    }
   }
+}
+
+.readmore:hover {
+  color: @tangerine;
+}
+
+.dwtitle {
+  font-family: 'Campton-L', Fallback, sans-serif;;
+  font-size: 1rem;
+}
+
+.dwSelect {
+  color: white;
+  font-family: 'Campton-B', Fallback, sans-serif;;
+  font-size: 1.5rem;
+  background: @tangerine;
+  padding: 5px;
+  margin: 5px;
+  border-bottom: 2px solid @orange;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
 
 .dwSelect:hover {
   background: @orange;
 }
 
-.valittu{
+.valittu {
   background: @orange !important;
 }
 
-  .dwdivider {
-    font-family: 'Campton-L', Fallback, sans-serif;;
-    font-size: 1.5rem;
+.dwdivider {
+  font-family: 'Campton-L', Fallback, sans-serif;;
+  font-size: 1.5rem;
+}
+
+.faceball-holder {
+  width: 150px;
+  margin: 5px;
+  float: left;
+
+  .dwi {
+    position: relative;
+    transition: 1s;
+  }
+  .ddwi {
+    top: -10000px !important;
   }
 
-  .faceball-holder {
+  .name {
+    display: none;
+    position: absolute;
+    background: @ash;
+    margin-top: -30px;
     width: 150px;
-    margin: 5px;
-    float:left;
+    font-family: 'Campton-L', Fallback, sans-serif;;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+  }
 
-    .dwi {
-      position: relative;
-      transition: 1s;
-    }
-    .ddwi {
-      top: -10000px !important;
-    }
+  span {
+    color: white;
+  }
 
-    .name {
-      display: none;
-      position: absolute;
-      background: @ash;
-      margin-top: -30px;
-      width: 150px;
-      font-family: 'Campton-L', Fallback, sans-serif;;
-      font-size: 0.8rem;
-      line-height: 0.8rem;
-    }
+  .jobTitle {
 
-    span {
-      color: white;
-    }
+  }
 
-    .jobTitle{
+}
 
+.face-ball {
+  border: 5px solid @ash;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto;
+  transition: 1s;
+  background-size: cover;
+  background-position: 50%;
+}
+
+#sysartilaiset .faceball-holder {
+  float: left;
+}
+
+#yhteystiedot {
+  background-color: @ash;
+  font-family: 'Campton-L', Fallback, sans-serif;;
+
+  h3 {
+    font-family: 'Campton-B', Fallback, sans-serif;;
+    color: @light;
+    margin: 0px;
+    margin-top: 20px;
+  }
+
+  li {
+    text-align: center;
+    width: 80px;
+    height: 80px;
+  }
+
+  i {
+    font-size: 5rem;
+    color: @light;
+    margin: 20px;
+
+  }
+  i:hover {
+    color: @tangerine;
+  }
+
+  .address {
+    position: relative;
+    z-index: 2;
+  }
+
+  .markerHolder {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .marker {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-left: 10px;
+    color: @tangerine;
+    cursor: pointer;
+
+    &:hover {
+      color: @orange;
     }
 
   }
 
-  .face-ball {
-    border: 5px solid @ash;
+}
+
+.asiakkaat {
+  text-align: center;
+}
+
+.customer-logo {
+  border: 5px solid @ash;
+}
+
+.happy-customer {
+  float: left !important;
+  padding: 10px;
+  text-align: center;
+  img {
+    background: white;
+    border-radius: 30px;
+  }
+}
+
+#marker {
+  text-align: center;
+  font-size: 240px !important;
+  line-height: 100px;
+  margin-top: -100px;
+  color: @tangerine;
+}
+
+@media only screen and (max-width: 750px) {
+
+  .dwSelect {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .news-ball {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    margin: auto;
+    box-shadow: 0 0 1px #76787B inset;
     transition: 1s;
-    background-size: cover;
-    background-position: 50%;
   }
 
-  #sysartilaiset .faceball-holder{
-    float:left;
+  .news-head {
+    height: 100px;
+
+    h3 {
+      line-height: 1rem;
+
+      .date {
+        font-size: 10px;
+      }
+    }
+
   }
 
   #yhteystiedot {
-    background-color: @ash;
-    font-family: 'Campton-L', Fallback, sans-serif;;
-
-    h3 {
-      font-family: 'Campton-B', Fallback, sans-serif;;
-      color: @light;
-      margin: 0px;
-      margin-top: 20px;
-    }
-
-    li {
-      text-align: center;
-      width: 80px;
-      height: 80px;
-    }
-
     i {
-      font-size: 5rem;
+      font-size: 3rem;
       color: @light;
       margin: 20px;
 
     }
-    i:hover {
-      color: @tangerine;
-    }
-
-    .address {
-      position: relative;
-      z-index: 2;
-    }
-
-    .markerHolder {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 1;
-    }
-
-    .marker {
-      font-size: 1.5rem;
-      margin: 0;
-      margin-left: 10px;
-      color:@tangerine;
-      cursor:pointer;
-
-      &:hover{color:@orange;}
-
-    }
-
   }
 
-  .asiakkaat {
+  .readmore {
+    color: transparent;
+    height: 100%;
+
+    &:hover {
+      color: transparent
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
     text-align: center;
   }
 
-  .customer-logo {
-    border: 5px solid @ash;
-  }
-
-  .happy-customer {
-    float: left !important;
-    padding: 10px;
+  h3 {
+    font-size: 1.1rem;
     text-align: center;
-    img {
-      background: white;
-    }
   }
 
-  #marker {
-    text-align: center;
-    font-size: 240px !important;
-    line-height: 100px;
-    margin-top: -100px;
-    color: @tangerine;
-  }
-
-  .nav a:hover {
-    background: @tangerine;
-  }
-
-  .avoimet {
+  p {
     text-align: left;
   }
 
-  @media only screen and (max-width: 750px) {
+  #header {
+    height: 100px;
+    background: white;
+    transition: .5s;
+    text-align: center;
+    -webkit-box-shadow: 0 0 0 5px @tangerine;
+    -moz-box-shadow: 0 0 0 5px @tangerine;
+    box-shadow: 0 0 0 5px @tangerine;
 
+    #logo {
+      padding-top: 25px;
+      display: none;
 
-    .dwSelect {
-      font-size: 1rem;
-      line-height: 2rem;
-    }
-
-
-
-    .news-head{
-      height:100px;
-
-      h3{
-        line-height:1rem;
-
-        .date {
-          font-size: 10px;
-        }
-      }
-
-
-
-    }
-
-    #yhteystiedot{
-      i {
-        font-size: 3rem;
-        color: @light;
-        margin: 20px;
-
-      }
-    }
-
-    .readmore{
-      color:transparent;
-      height: 100%;
-
-      &:hover{
-        color:transparent
-      }
-    }
-
-
-     h2 {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    h3 {
-      font-size: 1.1rem;
-      text-align: center;
-    }
-
-    p {
-      text-align: left;
-    }
-
-    .news-ball {
-      width: 75px;
-      height: 75px;
-      border: 1px solid @ash;
-      transition: 1s;
-    }
-
-    #header {
-      height: 100px;
-      background: white;
-      transition: .5s;
-      text-align: center;
-
-      #logo {
-        padding-top: 25px;
+      .slogan {
         display: none;
-
-        img {
-          height: 50px;
-        }
       }
-
-    }
-
-    .ghost-start {
-      height: 50px !important;
-      transition: all 1s;
-    }
-
-    .nav a {
-      font-size: 10px;
-      line-height: 30px;
-      margin: 2px;
-      padding:4px;
-    }
-
-    .ball {
-      width: 100px !important;
-      height: 100px !important;
-      margin: 0px !important;
-      transition: all 0.3s ease, background-position 1ms;
-    }
-
-    .ball h2 {
-      line-height: 100px !important;
-      font-size: 2rem;
-      transition: all 0.3s ease, background-position 1ms;
+      img {
+        height: 50px;
+      }
     }
 
   }
 
-
-
-
-
-  ::selection {
-    background: transparent;
-    color: white;
+  .ghost-start {
+    height: 50px !important;
+    transition: all 1s;
   }
 
-  ::-moz-selection {
-    background: transparent;
-    color: white;
+  #topnav, #bottomnav {
+    display: none;
   }
 
-  p::selection, h2::selection, h3::selection, a::selection {
-    background: @tangerine;
-    color: white;
+  .mobileHamburger {
+    right: 15px;
   }
 
+  .ball {
+    width: 100px !important;
+    height: 100px !important;
+    margin: 0px !important;
+    transition: all 0.3s ease, background-position 1ms;
+  }
 
+  .ball h2 {
+    line-height: 100px !important;
+    font-size: 2rem;
+    transition: all 0.3s ease, background-position 1ms;
+  }
 
+}
 
+::selection {
+  background: transparent;
+  color: white;
+}
+
+::-moz-selection {
+  background: transparent;
+  color: white;
+}
+
+p::selection, h2::selection, h3::selection, a::selection {
+  background: @tangerine;
+  color: white;
+}
 
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-button {
   width: 8px;
-  height:5px;
+  height: 5px;
 }
+
 ::-webkit-scrollbar-track {
-  background:@ash-light;
+  background: @ash-light;
 }
+
 ::-webkit-scrollbar-thumb {
-  background:@orange;
+  background: @orange;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background:@orange;
+  background: @orange;
 }
+

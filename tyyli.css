@@ -12,6 +12,11 @@
 ---------------------------------*/
 html,
 body {
+  background-image: url("img/myynti_tausta.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   background-color: #f7f7ed;
   text-align: center;
 }
@@ -41,11 +46,21 @@ p {
 }
 a {
   color: #f79952;
+  word-break: break-all;
+}
+a:link {
+  color: #f79952;
 }
 a:visited {
   color: #f79952;
 }
 a:hover {
+  color: #f36421;
+}
+a:active {
+  color: #f36421;
+}
+a:focus {
   color: #f36421;
 }
 .date {
@@ -56,10 +71,31 @@ a:hover {
   background: #f79952;
   padding: 10px;
 }
-.uusi {
-  font-size: 85px !important;
-  color: white;
+.lefty {
   position: relative;
+  height: 100px;
+  text-align: center;
+}
+.leftyIcon i {
+  color: #76787b;
+  font-size: 60px !important;
+  height: 100px;
+  line-height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  background-color: white;
+  box-shadow: 0 0 1px #76787B inset;
+}
+.imgInText {
+  float: left;
+  shape-outside: circle();
+  margin-right: 20px;
+}
+.oranssi {
+  color: #f79952 !important;
+  font-family: Campton-B;
+  margin-bottom: 2px !important;
+  line-height: 1rem;
 }
 #sysartilaiset {
   display: -webkit-box;
@@ -91,36 +127,108 @@ a:hover {
 .bottom30 {
   margin-bottom: 30px !important;
 }
-#topnav {
-  background-color: #76787b;
+.sectionHead {
+  padding-bottom: 0px !important;
+}
+.sectionBody {
+  padding-top: 0px !important;
+}
+.hamburger {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  color: #f79952;
+  right: 15px;
+  top: 30px;
+  font-size: 40px;
+  line-height: 40px;
+}
+.mobileHamburger {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  color: #f79952;
+  right: 5000px;
+  top: 30px;
+  font-size: 40px;
+  line-height: 40px;
+}
+#mobileNav {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 5000px;
+  top: 0;
+  background: rgba(118, 120, 123, 0.6);
+  z-index: 99;
+  transition: 0.5s;
+}
+#mobileNav.show {
+  left: 0 !important;
+  transition: 0.5s;
+}
+#mobileNav nav {
+  float: right;
+  font-size: 30px;
+  margin-top: 10%;
+}
+#mobileNav nav a {
+  width: 100%;
   text-align: left;
+  background: white;
+  float: right;
+  clear: right;
+  margin-bottom: 5px;
+  padding: 8px;
+  border-radius: 5px;
+}
+#topnav,
+#bottomnav {
+  height: 30px;
+  background-color: white;
+  text-align: center;
   z-index: 10;
   transition: opacity 1s;
   position: relative;
 }
-.nav {
-  height: 30px;
-}
-.nav a {
-  color: white;
+#topnav a,
+#bottomnav a {
+  color: #f79952;
   font-size: 20px;
   margin: 20px;
   padding: 10px;
   line-height: 30px;
+  transition: .5s;
+}
+#topnav a:hover,
+#bottomnav a:hover {
+  color: #76787b;
+  background: #f79952;
+}
+#topnav {
+  -webkit-box-shadow: 0px -5px 0px 0px #f79952;
+  -moz-box-shadow: 0px -5px 0px 0px #f79952;
+  box-shadow: 0px -5px 0px 0px #f79952;
+}
+#bottomnav {
+  -webkit-box-shadow: 0px 5px 0px 0px #f79952;
+  -moz-box-shadow: 0px 5px 0px 0px #f79952;
+  box-shadow: 0px 5px 0px 0px #f79952;
 }
 /*Keskipalkki*/
 #header-small {
-  height: 30px;
+  height: 80px;
   background-color: white;
-  transition: 2s;
+  transition: 1s;
   text-align: center;
 }
-#header-small #logo-small {
+#header-small #logoSmall {
   width: 100%;
   text-align: center;
 }
 #header-small img {
-  height: 30px;
+  height: 80px;
+  padding-top: 20px;
 }
 .preview {
   transition: 1s;
@@ -131,20 +239,11 @@ a:hover {
   transition: .5s;
 }
 #header #logo {
-  padding-top: 50px;
+  padding-top: 35px;
   display: none;
-}
-#bottomnav {
-  background-color: #76787b;
-  text-align: right;
-  z-index: 10;
-  transition: opacity 1s;
 }
 .nav-start {
   opacity: 0;
-}
-#basement {
-  text-align: left;
 }
 .ankkuri {
   display: block;
@@ -162,13 +261,11 @@ a:hover {
   position: fixed !important;
   width: 100%;
   left: 0;
-}
-.fixed-bar-1 {
-  top: 0;
+  z-index: 999;
 }
 .fixed-bar-2 {
-  top: 30px;
-  height: 30px !important;
+  top: 0px;
+  height: 100px !important;
   transition: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -176,16 +273,16 @@ a:hover {
   display: flex;
   justify-content: center;
   z-index: 99;
-}
-.fixed-bar-3 {
-  top: 60px;
+  -webkit-box-shadow: 0px 5px 0px 0px #f79952;
+  -moz-box-shadow: 0px 5px 0px 0px #f79952;
+  box-shadow: 0px 5px 0px 0px #f79952;
 }
 .fixed-bar-4 {
   bottom: 60px;
 }
 .fixed-bar-5 {
-  bottom: 30px;
-  height: 30px !important;
+  bottom: 0px;
+  height: 100px !important;
   transition: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -193,9 +290,9 @@ a:hover {
   display: flex;
   justify-content: center;
   z-index: 99;
-}
-.fixed-bar-6 {
-  bottom: 0px;
+  -webkit-box-shadow: 0px -5px 0px 0px #f79952;
+  -moz-box-shadow: 0px -5px 0px 0px #f79952;
+  box-shadow: 0px -5px 0px 0px #f79952;
 }
 .top-stay {
   position: fixed;
@@ -213,6 +310,11 @@ a:hover {
 .header-start {
   height: 0px !important;
   overflow: hidden;
+}
+.slogan {
+  font-size: 18px;
+  color: #76787B;
+  text-align: center;
 }
 .ghost-start {
   height: 100px !important;
@@ -269,14 +371,13 @@ h2 {
   height: 0px;
 }
 .news-ball {
-  border: 5px solid grey;
-  float: left !important;
   width: 150px;
   height: 150px;
   border-radius: 50%;
   transition: 1s;
   background-size: cover;
   background-position: 50%;
+  box-shadow: 0 0 1px #76787B inset;
 }
 .news-content {
   display: none;
@@ -286,17 +387,38 @@ h2 {
 .news-head h3 {
   text-align: left;
 }
-#twitter .bird {
-  font-size: 100px;
+#twitter .twitterFlow {
+  position: relative;
+  margin-bottom: 7px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  min-height: 60px;
+  text-align: center;
+  background: white;
+  box-shadow: 1px 1px #76787B;
+  padding-bottom: 0;
+}
+#twitter .twitterFlow .published {
+  font-family: Campton-B;
   color: #76787b;
-  padding: 30px;
+  float: left;
+  margin-left: -20px;
 }
-#twitter .tweet {
-  padding: 30px;
-  border-radius: 10px;
-  z-index: 2;
+#twitter .twitterFlow .showContent {
+  padding-right: 50px;
+  margin: 0;
+  font-size: 1.5rem;
+  color: #595959;
+  font-family: Campton-B;
 }
-#twitter .tweet p {
+#twitter .twitterFlow p {
+  color: #76787b;
+  padding: 0;
+}
+#twitter .twitterFlow i {
+  color: #f79952;
+}
+#twitter .twitterFlow p {
   font-size: 20px;
   word-break: break-word;
 }
@@ -328,28 +450,94 @@ h2 {
   transition: 1s;
   z-index: 9;
 }
-#ura {
-  margin-bottom: 100px;
+.lead p {
+  font-weight: bold;
 }
-.uraMahdollisuus {
-  background: #76787b;
-  margin: 5px;
+.nappi {
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 35px !important;
+  color: #f79952;
+  height: 35px;
+  width: 35px;
+  transition: 0.5s;
+}
+.nappi:hover {
+  color: #f36421;
+}
+.ympari {
+  -ms-transform: rotate(180deg) !important;
+  /* IE 9 */
+  -webkit-transform: rotate(180deg) !important;
+  /* Safari */
+  transform: rotate(180deg) !important;
+  transition: 0.5s;
+}
+.article {
+  position: relative;
+  background: white;
+  margin-bottom: 7px;
   padding: 10px 20px 10px 20px;
   cursor: pointer;
+  min-height: 60px;
+  box-shadow: 1px 1px #76787B;
 }
-.uraMahdollisuus .tyopaikka {
+.article .published {
+  font-family: Campton-B;
+  color: #76787b;
+  float: left;
+  margin-left: -20px;
+}
+.article .showContent {
+  padding-right: 50px;
   margin: 0;
+  font-size: 1.5rem;
+  color: #595959;
+  font-family: Campton-B;
 }
-.uraMahdollisuus p {
-  color: white;
+.article p {
+  color: #76787b;
   padding: 0;
 }
-.uraInfo {
+.articleContent {
+  position: relative;
   padding-top: 10px;
   display: none;
+  cursor: default;
 }
-.uraInfo p {
+.articleContent p {
   text-align: left;
+}
+.articleContent .jaa {
+  float: right;
+  height: 100%;
+  width: 40px;
+}
+.articleContent .jaa i {
+  font-size: 40px;
+  margin-top: 15px;
+  float: right;
+}
+ul {
+  padding-left: 20px;
+}
+ul li {
+  list-style-type: none;
+  text-align: left;
+  color: #76787b;
+}
+ul li:before {
+  content: "";
+  line-height: 1em;
+  font-size: 20px;
+  width: .5em;
+  height: .5em;
+  background-color: #f79952;
+  float: left;
+  margin: 5px 5px 5px 0px;
+  border-radius: 50%;
 }
 .readmore:hover {
   color: #f79952;
@@ -476,6 +664,7 @@ h2 {
 }
 .happy-customer img {
   background: white;
+  border-radius: 30px;
 }
 #marker {
   text-align: center;
@@ -484,16 +673,16 @@ h2 {
   margin-top: -100px;
   color: #f79952;
 }
-.nav a:hover {
-  background: #f79952;
-}
-.avoimet {
-  text-align: left;
-}
 @media only screen and (max-width: 750px) {
   .dwSelect {
     font-size: 1rem;
     line-height: 2rem;
+  }
+  .news-ball {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 1px #76787B inset;
+    transition: 1s;
   }
   .news-head {
     height: 100px;
@@ -527,20 +716,20 @@ h2 {
   p {
     text-align: left;
   }
-  .news-ball {
-    width: 75px;
-    height: 75px;
-    border: 1px solid #76787b;
-    transition: 1s;
-  }
   #header {
     height: 100px;
     background: white;
     transition: .5s;
     text-align: center;
+    -webkit-box-shadow: 0 0 0 5px #f79952;
+    -moz-box-shadow: 0 0 0 5px #f79952;
+    box-shadow: 0 0 0 5px #f79952;
   }
   #header #logo {
     padding-top: 25px;
+    display: none;
+  }
+  #header #logo .slogan {
     display: none;
   }
   #header #logo img {
@@ -550,11 +739,12 @@ h2 {
     height: 50px !important;
     transition: all 1s;
   }
-  .nav a {
-    font-size: 10px;
-    line-height: 30px;
-    margin: 2px;
-    padding: 4px;
+  #topnav,
+  #bottomnav {
+    display: none;
+  }
+  .mobileHamburger {
+    right: 15px;
   }
   .ball {
     width: 100px !important;
